@@ -77,8 +77,9 @@ or
 - screenshot_failed_steps=yes or no
 - screenshot_skipped_steps=yes or no
 - screenshot_all_steps=yes or no
+![image](https://github.com/user-attachments/assets/71e04799-f801-4007-99ce-91e77122ac1b)
 
-  ![image](https://user-images.githubusercontent.com/87883620/161657881-5235139a-9982-43c0-ac37-09f22fff1206.png)
+
 
 **9. Main keyword is WebUI**
 
