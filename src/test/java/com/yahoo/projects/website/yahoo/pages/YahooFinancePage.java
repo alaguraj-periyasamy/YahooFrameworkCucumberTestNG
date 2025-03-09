@@ -26,7 +26,7 @@ public class YahooFinancePage {
     private final By tslaelement = By.xpath("//div[contains(text(), 'TSLA')]");
     private final By autosuggestDropdown = By.xpath("//ul[@role='listbox']/li");
     private final By firstSuggestion = By.xpath("//ul[@role='listbox']/li[1]");
-    private final By tslaHeader = By.xpath("//h1[contains(text(), 'Tesla, Inc.')]");
+    private final By tslaHeader = By.xpath("//section[contains(@class, 'container')]//h1");
     private final By stockPrice = By.xpath("//span[@data-testid='qsp-price']");
     private final By previousClose = By.xpath("//fin-streamer[@data-field='regularMarketPreviousClose']");
     private final By volume = By.xpath("//fin-streamer[@data-field='regularMarketVolume']");
