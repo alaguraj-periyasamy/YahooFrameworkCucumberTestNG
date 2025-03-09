@@ -5,7 +5,7 @@ Feature: Yahoo Finance Stock Search and Validation
     Given the user navigates to yahoo
 
   @Tc-001
-  Scenario Outline: Verify Stock Search Functionality
+  Scenario Outline: Verify Stock Search Functionality <Stock Symbol>
     When the user enters "<Stock Symbol>" in the search bar
     Then the user verify the tsla header should appear
     Then the user scroll down
@@ -21,7 +21,7 @@ Feature: Yahoo Finance Stock Search and Validation
       | AMZN         | 200            |
 
   @Tc-002
-  Scenario Outline: Validate Stock Trend (Up/Down)
+  Scenario Outline: Validate Stock Trend (Up/Down) <Stock Symbol>
     When the user enters "<Stock Symbol>" in the search bar
     Then the user verifies the stock trend is "<Trend>"
     Examples:
@@ -34,7 +34,7 @@ Feature: Yahoo Finance Stock Search and Validation
 
 
   @Tc-003
-  Scenario Outline: Search for an Invalid Stock Symbol
+  Scenario Outline: Search for an Invalid Stock Symbol <Stock Symbol>
     When the user enters "<Stock Symbol>" in the search bar invalid data
     Then the user verifies an error message is displayed
 
@@ -45,7 +45,7 @@ Feature: Yahoo Finance Stock Search and Validation
       | NOEXISTSYMBL |
 
   @Tc-004
-  Scenario Outline: Verify if Market is Open or Closed
+  Scenario Outline: Verify if Market is Open or Closed <Stock Symbol>
     When the user enters "<Stock Symbol>" in the search bar
     Then the user verifies the market status
     Examples:
