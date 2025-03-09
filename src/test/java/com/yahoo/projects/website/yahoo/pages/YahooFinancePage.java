@@ -11,6 +11,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -128,23 +129,34 @@ public class YahooFinancePage {
     }
 
     public String getMarketStatus() {
-        // Get elements correctly as Strings, not Lists
+        // Get elements as Strings
         String marketCloseElements = WebUI.getTextElement(marketCloseTimeLocator);
         String afterHoursElements = WebUI.getTextElement(afterHoursTimeLocator);
 
         LogUtils.info("✅ Market close status Status: " + marketCloseElements + " Market Open Status : " + afterHoursElements);
 
-        String marketCloseText = marketCloseElements != null ? marketCloseElements : "";
-        String afterHoursText = afterHoursElements != null ? afterHoursElements : "";
+        // Extract Time Text
+        String marketCloseText = (marketCloseElements != null) ? marketCloseElements : "";
+        String afterHoursText = (afterHoursElements != null) ? afterHoursElements : "";
 
+        // Extract Time from Text
         String marketCloseTime = extractTime(marketCloseText);
         String afterHoursTime = extractTime(afterHoursText);
 
+        // Get Current Time
         LocalTime currentTime = LocalTime.now();
 
+        // Convert Extracted Time to LocalTime
         LocalTime closeTime = convertToTime(marketCloseTime);
         LocalTime afterTime = convertToTime(afterHoursTime);
 
+        // Validate Parsed Time (Ensure it's not MIN)
+        if (closeTime.equals(LocalTime.MIN) || afterTime.equals(LocalTime.MIN)) {
+            LogUtils.info("❌ Invalid Market Close or After Hours Time. Market status cannot be determined.");
+            return "Market status UNKNOWN";
+        }
+
+        // Determine Market Status
         if (currentTime.isBefore(closeTime)) {
             return "Market is OPEN";
         } else if (currentTime.isAfter(closeTime) && currentTime.isBefore(afterTime)) {
@@ -153,6 +165,7 @@ public class YahooFinancePage {
             return "Market is CLOSED";
         }
     }
+
 
     private String extractTime(String text) {
         Pattern pattern = Pattern.compile("(\\d{1,2}:\\d{2}:\\d{2} (AM|PM))");
@@ -163,13 +176,18 @@ public class YahooFinancePage {
 
     private LocalTime convertToTime(String time) {
         try {
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("h:mm:ss a");
+            if (time == null || time.isEmpty()) {
+                LogUtils.info("❌ Invalid Time String: " + time);
+                return LocalTime.MIN;  // Default to a minimum valid time
+            }
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("h:mm:ss a", Locale.ENGLISH);
             return LocalTime.parse(time, formatter);
         } catch (DateTimeParseException e) {
             LogUtils.info("❌ Error Parsing Time: " + time);
-            return null;
+            return LocalTime.MIN;  // Return a default value instead of null
         }
     }
+
 
 
 }
