@@ -40,15 +40,15 @@
 
 
 **2. Cucumber Report**
+![image](https://github.com/user-attachments/assets/f1b5de41-1c65-4487-ac1f-af258d6ffb3d)
 
-![image](https://user-images.githubusercontent.com/87883620/194338092-1046970c-2ca4-40da-b0e8-b03f71656c09.png)
 
 **3. Extent Report**
 
 - Config from src/test/resources/extent.properties
 - Config PDF from src/test/resources/pdf-config.yaml
+![image](https://github.com/user-attachments/assets/ae526626-e936-4116-b570-1ab94ca2212b)
 
-![image](https://user-images.githubusercontent.com/87883620/194404333-306a6d53-514a-4229-ba47-f3c42e7cce1f.png)
 
 **4. Allure Report**
 
@@ -56,7 +56,6 @@
 or
 - ```allure generate --single-file target/allure-results -o allure-report --clean```
 
-![image](https://user-images.githubusercontent.com/87883620/161662507-9e4dc698-e452-4b43-a4f5-9808c81419a2.png)
 
 **5. Send Mail after the run test**
 
@@ -67,7 +66,8 @@ or
 
 - Call class: Log.info , Log.pass, Log.error,... (**Log** is a custom global class from Log4j2)
 
-![image](https://user-images.githubusercontent.com/87883620/161657858-d333ac1d-9e7b-4c1b-baac-151a237a1fa0.png)
+![image](https://github.com/user-attachments/assets/3a15a6b1-17bf-4225-9ddc-24bd78704e6d)
+
 
 **7. Record video and Screenshot**
 
@@ -77,8 +77,9 @@ or
 - screenshot_failed_steps=yes or no
 - screenshot_skipped_steps=yes or no
 - screenshot_all_steps=yes or no
+![image](https://github.com/user-attachments/assets/71e04799-f801-4007-99ce-91e77122ac1b)
 
-  ![image](https://user-images.githubusercontent.com/87883620/161657881-5235139a-9982-43c0-ac37-09f22fff1206.png)
+
 
 **9. Main keyword is WebUI**
 
@@ -87,6 +88,233 @@ or
 - Example: WebUI.setWindowSize(1024, 768), WebUI.screenshotElement(By by, String elementName),...
 
 ### Project structure
-```
+```📦AutomationFrameworkCucumberTestNG
+ ┣ 📂.github
+ ┃ ┗ 📂workflows
+ ┃ ┃ ┗ 📜maven.yml
+ ┣ 📂src
+ ┃ ┣ 📂main
+ ┃ ┃ ┣ 📂java
+ ┃ ┃ ┃ ┗ 📂com
+ ┃ ┃ ┃ ┃ ┗ 📂yahoo
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂annotations
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜FrameworkAnnotation.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂config
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ConfigFactory.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜Configuration.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂constants
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜FrameworkConstants.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂driver
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜BrowserFactory.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜DriverManager.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜TargetFactory.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂enums
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AuthorType.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Browser.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CategoryType.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜FailureHandling.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Platform.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Project.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜Target.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂exceptions
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜FrameworkException.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜HeadlessNotSupportedException.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜InvalidPathForExcelException.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜InvalidPathForExtentReportFileException.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜InvalidPathForFilesException.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜InvalidRemoteWebDriverURLException.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜TargetNotValidException.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂helpers
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CaptureHelpers.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜DatabaseHelpers.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ExcelHelpers.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜FileHelpers.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Helpers.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜PropertiesHelpers.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜ScreenRecoderHelpers.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂keywords
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜WebUI.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂mail
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜EmailAttachmentsSender.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜EmailConfig.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂report
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AllureManager.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ExtentReportManager.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ExtentTestManager.java
+ ┃ ┃ ┃ ┃ ┃ ┗ 📂utils
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜BrowserInfoUtils.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜DataFakerUtils.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜DataGenerateUtils.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜DateUtils.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜DecodeUtils.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜EmailSendUtils.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜IconUtils.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜JsonUtils.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜LanguageUtils.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜LocalStorageUtils.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜LogUtils.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ObjectUtils.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ReportUtils.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜ZipUtils.java
+ ┃ ┃ ┗ 📂resources
+ ┃ ┃ ┃ ┣ 📂META-INF
+ ┃ ┃ ┃ ┃ ┗ 📂services
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜io.qameta.allure.listener.TestLifecycleListener
+ ┃ ┃ ┃ ┗ 📜log4j2.properties
+ ┃ ┗ 📂test
+ ┃ ┃ ┣ 📂java
+ ┃ ┃ ┃ ┗ 📂com
+ ┃ ┃ ┃ ┃ ┗ 📂yahoo
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂common
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜BaseTest.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂dataprovider
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜DataProviderManager.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂hooks
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CucumberListener.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Hooks.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜TestContext.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂listeners
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AllureListener.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜TestListener.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂projects
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂website
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂yahoo
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂pages
+ ┃ ┃ ┃ ┃ ┃ ┗ 📂runners
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜TestRunnerYahoo.java
+ ┃ ┃ ┗ 📂resources
+ ┃ ┃ ┃ ┣ 📂config
+ ┃ ┃ ┃ ┃ ┣ 📜config.json
+ ┃ ┃ ┃ ┃ ┣ 📜config.properties
+ ┃ ┃ ┃ ┃ ┗ 📜data.properties
+ ┃ ┃ ┃ ┣ 📂features
+ ┃ ┃ ┃ ┃ ┗ 📜Yahoo.feature
+ ┃ ┃ ┃ ┣ 📂objects
+ ┃ ┃ ┃ ┃ ┗ 📜locators.properties
+ ┃ ┃ ┃ ┣ 📂suites
+ ┃ ┃ ┃ ┃ ┗ 📜Yahoo.xml
+ ┃ ┃ ┃ ┣ 📂testdata
+ ┃ ┃ ┃ ┣ 📜cucumber.properties
+ ┃ ┃ ┃ ┣ 📜extent.properties
+ ┃ ┃ ┃ ┗ 📜pdf-config.yaml
+ ┣ 📂target
+ ┃ ┣ 📂classes
+ ┃ ┃ ┣ 📂yahoo
+ ┃ ┃ ┃ ┗ 📂com
+ ┃ ┃ ┃ ┃ ┣ 📂annotations
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜FrameworkAnnotation.class
+ ┃ ┃ ┃ ┃ ┣ 📂config
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜ConfigFactory.class
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜Configuration.class
+ ┃ ┃ ┃ ┃ ┣ 📂constants
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜FrameworkConstants.class
+ ┃ ┃ ┃ ┃ ┣ 📂driver
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜BrowserFactory$1.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜BrowserFactory$2.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜BrowserFactory$3.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜BrowserFactory$4.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜BrowserFactory.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜DriverManager.class
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜TargetFactory.class
+ ┃ ┃ ┃ ┃ ┣ 📂enums
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜AuthorType.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜Browser.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜CategoryType.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜FailureHandling.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜Platform.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜Project.class
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜Target.class
+ ┃ ┃ ┃ ┃ ┣ 📂exceptions
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜FrameworkException.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜HeadlessNotSupportedException.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜InvalidPathForExcelException.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜InvalidPathForExtentReportFileException.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜InvalidPathForFilesException.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜InvalidRemoteWebDriverURLException.class
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜TargetNotValidException.class
+ ┃ ┃ ┃ ┃ ┣ 📂helpers
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜CaptureHelpers.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜DatabaseHelpers.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜ExcelHelpers.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜FileHelpers.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜Helpers.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜PropertiesHelpers.class
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜ScreenRecoderHelpers.class
+ ┃ ┃ ┃ ┃ ┣ 📂keywords
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜WebUI.class
+ ┃ ┃ ┃ ┃ ┣ 📂mail
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜EmailAttachmentsSender$1.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜EmailAttachmentsSender.class
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜EmailConfig.class
+ ┃ ┃ ┃ ┃ ┣ 📂report
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜AllureManager.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜ExtentReportManager.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜ExtentTestManager.class
+ ┃ ┃ ┃ ┃ ┃
+ ┃ ┃ ┃ ┃ ┗ 📂utils
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜BrowserInfoUtils.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜DataFakerUtils.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜DataGenerateUtils.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜DateUtils.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜DecodeUtils.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜EmailSendUtils.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜IconUtils.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜JsonUtils$1.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜JsonUtils.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜LanguageUtils.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜LocalStorageUtils.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜LogUtils.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜ObjectUtils.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜ReportUtils.class
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜ZipUtils.class
+ ┃ ┃ ┣ 📂META-INF
+ ┃ ┃ ┃ ┗ 📂services
+ ┃ ┃ ┃ ┃ ┗ 📜io.qameta.allure.listener.TestLifecycleListener
+ ┃ ┃ ┗ 📜log4j2.properties
+ ┃ ┣ 📂generated-sources
+ ┃ ┃ ┗ 📂annotations
+ ┃ ┣ 📂generated-test-sources
+ ┃ ┃ ┗ 📂test-annotations
+ ┃ ┗ 📂test-classes
+ ┃ ┃ ┣ 📂yahoo
+ ┃ ┃ ┃ ┗ 📂com
+ ┃ ┃ ┃ ┃ ┣ 📂common
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜BaseTest.class
+ ┃ ┃ ┃ ┃ ┣ 📂dataprovider
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜DataProviderManager.class
+ ┃ ┃ ┃ ┃ ┣ 📂hooks
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜CucumberListener.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜Hooks.class
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜TestContext.class
+ ┃ ┃ ┃ ┃ ┣ 📂listeners
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜AllureListener.class
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜TestListener.class
+ ┃ ┃ ┃ ┃ ┣ 📂projects
+ ┃ ┃ ┃ ┃ ┃ ┗ 📂website
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂yahoo
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂pages
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Yahoopage.class
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂stepdefinitions
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜YahooSteps.class
+ ┃ ┃ ┃ ┃ ┗ 📂runners
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜TestRunnerYahoo.class
+ ┃ ┃ ┣ 📂config
+ ┃ ┃ ┃ ┣ 📜config.json
+ ┃ ┃ ┃ ┣ 📜config.properties
+ ┃ ┃ ┃ ┗ 📜data.properties
+ ┃ ┃ ┣ 📂features
+ ┃ ┃ ┃ ┗ 📜Yahoo.feature
+ ┃ ┃ ┣ 📂objects
+ ┃ ┃ ┃ ┗ 📜locators.properties
+ ┃ ┃ ┣ 📂suites
+ ┃ ┃ ┃ ┗ 📜SuiteFeatureYahoo.xml
+ ┃ ┃ ┣ 📂testdata
+ ┃ ┃ ┣ 📜cucumber.properties
+ ┃ ┃ ┣ 📜extent.properties
+ ┃ ┃ ┗ 📜pdf-config.yaml
+ ┣ 📜.gitignore
+ ┣ 📜CHANGELOG.txt
+ ┣ 📜pom.xml
+ ┗ 📜README.md
 
 ```
