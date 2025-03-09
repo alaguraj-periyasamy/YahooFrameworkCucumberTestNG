@@ -167,8 +167,6 @@ or
  ┃ ┃ ┃ ┃ ┗ 📂yahoo
  ┃ ┃ ┃ ┃ ┃ ┣ 📂common
  ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜BaseTest.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CommonPageCRM.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜CommonSteps.java
  ┃ ┃ ┃ ┃ ┃ ┣ 📂dataprovider
  ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜DataProviderManager.java
  ┃ ┃ ┃ ┃ ┃ ┣ 📂hooks
@@ -307,7 +305,7 @@ or
  ┃ ┃ ┣ 📂features
  ┃ ┃ ┃ ┗ 📜Yahoo.feature
  ┃ ┃ ┣ 📂objects
- ┃ ┃ ┃ ┗ 📜crm_locators.properties
+ ┃ ┃ ┃ ┗ 📜locators.properties
  ┃ ┃ ┣ 📂suites
  ┃ ┃ ┃ ┗ 📜SuiteFeatureYahoo.xml
  ┃ ┃ ┣ 📂testdata
