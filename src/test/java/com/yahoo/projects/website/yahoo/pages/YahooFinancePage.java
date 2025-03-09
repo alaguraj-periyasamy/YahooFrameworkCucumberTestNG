@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.asserts.SoftAssert;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -15,6 +17,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.*;
 
 public class YahooFinancePage {
     SoftAssert softAssert = new SoftAssert();
@@ -208,7 +211,7 @@ public class YahooFinancePage {
         WebUI.scrollToPosition(0, 100);
     }
 
-    public void printHistoricalData() {
+/*    public void printHistoricalData() {
         LogUtils.info("Fetching Historical Stock Data...");
 
         List<String> headers = WebUI.getListElementsText(historicaltanleheaderdata);
@@ -217,6 +220,70 @@ public class YahooFinancePage {
         LogUtils.info("Historical Data: ");
         for (String row : rowData) {
             LogUtils.info(row);
+        }
+    }*/
+    public void printHistoricalData() {
+        LogUtils.info("Fetching Historical Stock Data...");
+
+        // Get Headers
+        List<String> headers = WebUI.getListElementsText(historicaltanleheaderdata);
+        if (headers.isEmpty()) {
+            LogUtils.warn("⚠️ No headers found! Exiting method.");
+            return;
+        }
+        LogUtils.info("Table Headers: " + headers);
+
+        // Get Row Data
+        List<String> rowData = WebUI.getListElementsText(historicaltableallrowdata);
+        if (rowData.isEmpty()) {
+            LogUtils.warn("⚠️ No historical data found! Exiting method.");
+            return;
+        }
+
+        // Store Data in a List of Maps
+        List<Map<String, String>> structuredData = new ArrayList<>();
+
+        for (String row : rowData) {
+            String[] values = row.split("\\s+"); // Splitting row data
+            if (values.length != headers.size()) {
+                LogUtils.warn("⚠️ Data mismatch! Skipping row: " + row);
+                continue;
+            }
+
+            Map<String, String> dataMap = new LinkedHashMap<>();
+            for (int i = 0; i < headers.size(); i++) {
+                dataMap.put(headers.get(i), values[i]);
+            }
+            structuredData.add(dataMap);
+        }
+
+        // Print Data in a Structured Format
+        for (Map<String, String> entry : structuredData) {
+            LogUtils.info(entry.toString());
+        }
+
+        // Export Data to CSV
+        exportDataToCSV(structuredData, "HistoricalStockData.csv");
+    }
+
+    // Method to Export Data to CSV
+    private void exportDataToCSV(List<Map<String, String>> data, String fileName) {
+        try (FileWriter writer = new FileWriter(fileName)) {
+            if (data.isEmpty()) return;
+
+            // Write Headers
+            writer.append(String.join(",", data.get(0).keySet()));
+            writer.append("\n");
+
+            // Write Rows
+            for (Map<String, String> row : data) {
+                writer.append(String.join(",", row.values()));
+                writer.append("\n");
+            }
+
+            LogUtils.info("✅ Data successfully exported to: " + fileName);
+        } catch (IOException e) {
+            LogUtils.error("❌ Error writing to CSV: " + e.getMessage());
         }
     }
 
