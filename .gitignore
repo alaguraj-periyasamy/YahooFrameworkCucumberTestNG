@@ -7,15 +7,4 @@ ExportData/
 ExtentReports/
 ExtentReports.zip
 logs/
-target/
-test-output/
-CucumberReports/
-HDSD.txt
-*.png
-*.jpg
-*.jpeg
-*.zip
-*.iml
-screenshots/
-allure-report/
-exports/
+
