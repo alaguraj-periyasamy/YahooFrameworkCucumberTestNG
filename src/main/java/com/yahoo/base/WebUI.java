@@ -2601,6 +2601,7 @@ public class WebUI {
 
     }
 
+
     /**
      * Click on element with timeout
      *
@@ -2970,6 +2971,7 @@ public class WebUI {
         }
         return null;
     }
+
 
     /**
      * Wait for the given element to be clickable.

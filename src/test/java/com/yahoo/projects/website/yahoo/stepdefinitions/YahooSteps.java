@@ -71,7 +71,6 @@ public class YahooSteps {
     }
     @Then("the user verifies an error message is displayed")
     public void verifyErrorMessageDisplayed() {
-        YahooFinancePage yahooFinancePage = new YahooFinancePage();
 
         Assert.assertTrue(yahooFinancePage.isErrorMessageDisplayed(), "❌ Error message is NOT displayed!");
         LogUtils.info("✅ Error message displayed: " + yahooFinancePage.getErrorMessage());
@@ -80,12 +79,22 @@ public class YahooSteps {
 
     @Then("the user verifies the market status")
     public void verifyMarketStatus() {
-        YahooFinancePage yahooFinancePage = new YahooFinancePage();
 
         String marketStatus = yahooFinancePage.getMarketStatus();
         LogUtils.info("✅ Market Status: " + marketStatus);
 
         Assert.assertNotNull(marketStatus, "❌ Market Status is not found!");
+    }
+
+    @When("the user navigates to historical data section")
+    public void user_navigates_to_historical_data() {
+        yahooFinancePage.navigateToHistoricalData();
+    }
+
+    @Then("the user verifies {string} data is displayed correctly")
+    public void user_verifies_data_is_displayed_correctly(String timePeriod) {
+        yahooFinancePage.selectTimePeriod(timePeriod);
+        yahooFinancePage.printHistoricalData();
     }
 
 }

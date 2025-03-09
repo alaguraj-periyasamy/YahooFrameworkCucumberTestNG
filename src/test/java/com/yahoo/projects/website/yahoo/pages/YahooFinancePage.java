@@ -42,6 +42,11 @@ public class YahooFinancePage {
 
     private final By marketCloseTimeLocator = By.xpath("(//div[@slot='marketTimeNotice']|//span[contains(text(),'After hours:')])[1]");
     private final By afterHoursTimeLocator = By.xpath("(//div[@slot='marketTimeNotice']|//span[contains(text(),'After hours:')])[2]");
+    private final By historicalData = By.xpath("//a[contains(@category, 'history') and text()]");
+    private final By calenderBtn = By.xpath("(//button[contains(@class, 'menuBtn')]/span)[2]");
+    private final By timePeriodButtons = By.xpath("//button[@value]");
+    private final By historicaltanleheaderdata = By.xpath("//table[contains(@class, 'table yf-1jecxey')]/thead/tr");
+    private final By historicaltableallrowdata = By.xpath("//table[contains(@class, 'table yf-1jecxey')]/tbody/tr");
 
 
     public void openPage() {
@@ -188,6 +193,31 @@ public class YahooFinancePage {
         }
     }
 
+    public void navigateToHistoricalData() {
+        WebUI.clickElement(historicalData);
+        WebUI.waitForPageLoaded();
+        WebUI.scrollToPosition(0, 300);
 
+    }
+
+    public void selectTimePeriod(String timePeriod) {
+        WebUI.clickElement(calenderBtn);
+        By timePeriodBtn = By.xpath("//button[@value='" + timePeriod + "']");
+        WebUI.clickElement(timePeriodBtn);
+        WebUI.waitForPageLoaded();
+        WebUI.scrollToPosition(0, 100);
+    }
+
+    public void printHistoricalData() {
+        LogUtils.info("Fetching Historical Stock Data...");
+
+        List<String> headers = WebUI.getListElementsText(historicaltanleheaderdata);
+        LogUtils.info("Table Headers: " + headers);
+        List<String> rowData = WebUI.getListElementsText(historicaltableallrowdata);
+        LogUtils.info("Historical Data: ");
+        for (String row : rowData) {
+            LogUtils.info(row);
+        }
+    }
 
 }
