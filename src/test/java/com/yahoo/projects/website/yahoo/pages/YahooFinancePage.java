@@ -5,6 +5,8 @@ import com.yahoo.utils.LogUtils;
 import org.openqa.selenium.By;
 import org.testng.asserts.SoftAssert;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,7 +17,7 @@ public class YahooFinancePage {
 
     private final By searchBar = By.xpath("//input[@id='ybar-sbq']");
     private final By searchBtn = By.xpath("//button[@type='submit']");
-    private final By tslaelement=By.xpath("//div[contains(text(), 'TSLA')]");
+    private final By tslaelement = By.xpath("//div[contains(text(), 'TSLA')]");
     private final By autosuggestDropdown = By.xpath("//ul[@role='listbox']/li");
     private final By firstSuggestion = By.xpath("//ul[@role='listbox']/li[1]");
     private final By tslaHeader = By.xpath("//h1[contains(text(), 'Tesla, Inc.')]");
@@ -28,6 +30,12 @@ public class YahooFinancePage {
     private final By week52Range = By.xpath("//fin-streamer[@data-field='fiftyTwoWeekRange']");
     private final By peRatio = By.xpath("//fin-streamer[@data-field='trailingPE']");
     private final By avgVolume = By.xpath("//fin-streamer[@data-field='averageVolume']");
+    private final By stockTrend = By.xpath("//span[@data-testid='qsp-price-change']");
+
+    private final By errorMessage = By.xpath("//p[contains(text(),'No results for')]");
+
+    private final By marketCloseTimeLocator = By.xpath("//span[contains(text(),'At close:')]");
+    private final By afterHoursTimeLocator = By.xpath("//span[contains(text(),'After hours:')]");
 
 
     public void openPage() {
@@ -43,17 +51,22 @@ public class YahooFinancePage {
         WebUI.clickElement(searchBtn);
         WebUI.waitForElementPresent(firstSuggestion);
     }
+    public void invalidsearchStock(String stockSymbol) {
+        WebUI.setText(searchBar, stockSymbol);
+        WebUI.clickElement(searchBtn);
 
-    public boolean isDisplayed() {
-        return WebUI.isElementVisible(tslaHeader,10);
     }
+    public boolean isDisplayed() {
+        return WebUI.isElementVisible(tslaHeader, 10);
+    }
+
     public void scrollDown() {
-        WebUI.scrollToPosition(0,400);
+        WebUI.scrollToPosition(0, 400);
         WebUI.takeFullPageScreenshot("homescreen");
     }
 
-    public boolean isTSLADisplayed(){
-       return WebUI.isElementDisplayed(tslaHeader);
+    public boolean isTSLADisplayed() {
+        return WebUI.isElementDisplayed(tslaHeader);
     }
 
     public void verifyStockPrice(int expectedPrice) {
@@ -67,15 +80,6 @@ public class YahooFinancePage {
         }
         softAssert.assertTrue(actualPrice > expectedPrice, "Stock price is NOT greater than " + expectedPrice);
         softAssert.assertAll();
-    }
-
-    public String getFirstSuggestionText() {
-        return WebUI.getTextElement(firstSuggestion);
-    }
-
-    public void selectFirstSuggestion() {
-        WebUI.clickElement(firstSuggestion);
-        WebUI.waitForPageLoaded();
     }
 
     public String getStockPrice() {
@@ -97,8 +101,55 @@ public class YahooFinancePage {
         LogUtils.info("✅ Stock Details: " + stockDetails);
         return stockDetails;
     }
+    public void verifyStockTrend(String expectedTrend) {
+        String trendValue = WebUI.getTextElement(stockTrend).trim();
+        String actualTrend = trendValue.contains("-") ? "Down" : "Up";  // If the value is negative, it's "Down", else "Up"
 
+        LogUtils.info("✅ Expected Trend: " + expectedTrend);
+        LogUtils.info("✅ Actual Trend: " + actualTrend);
 
+        softAssert.assertEquals(actualTrend, expectedTrend, "Stock trend does NOT match!");
+    }
+    public boolean isErrorMessageDisplayed() {
+        return WebUI.isElementDisplayed(errorMessage);
+    }
+
+    public String getErrorMessage() {
+        return WebUI.getTextElement(errorMessage);
+    }
+
+    public String getMarketStatus() {
+        String marketCloseText = WebUI.getTextElement(marketCloseTimeLocator);
+        String afterHoursText = WebUI.getTextElement(afterHoursTimeLocator);
+
+        // Extract Time from text
+        String marketCloseTime = extractTime(marketCloseText);
+        String afterHoursTime = extractTime(afterHoursText);
+
+        // Get Current Time
+        LocalTime currentTime = LocalTime.now();
+
+        // Convert Extracted Time to LocalTime
+        LocalTime closeTime = convertToTime(marketCloseTime);
+        LocalTime afterTime = convertToTime(afterHoursTime);
+
+        if (currentTime.isBefore(closeTime)) {
+            return "Market is OPEN";
+        } else if (currentTime.isAfter(closeTime) && currentTime.isBefore(afterTime)) {
+            return "Market is in AFTER HOURS trading";
+        } else {
+            return "Market is CLOSED";
+        }
+    }
+
+    private String extractTime(String text) {
+        return text.replaceAll(".*?(\\d{1,2}:\\d{2}:\\d{2} (AM|PM)).*", "$1");
+    }
+
+    private LocalTime convertToTime(String time) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("h:mm:ss a");
+        return LocalTime.parse(time, formatter);
+    }
 
 
 }

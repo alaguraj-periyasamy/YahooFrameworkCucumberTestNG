@@ -21,7 +21,7 @@ import org.testng.annotations.Test;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
         monochrome = true,
-        tags = "@Tc-001"
+        tags = "@Tc-004"
 )
 public class TestRunnerYahoo extends AbstractTestNGCucumberTests{
 

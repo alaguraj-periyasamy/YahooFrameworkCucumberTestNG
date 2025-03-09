@@ -58,5 +58,34 @@ public class YahooSteps {
         }
     }
 
+    @Then("the user verifies the stock trend is {string}")
+    public void theUserVerifiesTheStockTrend(String expectedTrend) {
+        YahooFinancePage yahooFinancePage = new YahooFinancePage();
+        yahooFinancePage.verifyStockTrend(expectedTrend);
+    }
+
+    @When("the user enters {string} in the search bar invalid data")
+    public void userEntersinvalidStockSymbol(String stockSymbol) {
+        LogUtils.info("Searching for stock: " + stockSymbol);
+        yahooFinancePage.invalidsearchStock(stockSymbol);
+    }
+    @Then("the user verifies an error message is displayed")
+    public void verifyErrorMessageDisplayed() {
+        YahooFinancePage yahooFinancePage = new YahooFinancePage();
+
+        Assert.assertTrue(yahooFinancePage.isErrorMessageDisplayed(), "❌ Error message is NOT displayed!");
+        LogUtils.info("✅ Error message displayed: " + yahooFinancePage.getErrorMessage());
+    }
+
+
+    @Then("the user verifies the market status")
+    public void verifyMarketStatus() {
+        YahooFinancePage yahooFinancePage = new YahooFinancePage();
+
+        String marketStatus = yahooFinancePage.getMarketStatus();
+        LogUtils.info("✅ Market Status: " + marketStatus);
+
+        Assert.assertNotNull(marketStatus, "❌ Market Status is not found!");
+    }
 
 }

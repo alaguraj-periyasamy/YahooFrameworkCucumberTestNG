@@ -1930,7 +1930,16 @@ public class WebUI {
             return false;
         }
     }
-
+    @Step("Verify element visible {0}")
+    public static boolean isElementVisible(By by) {
+        try {
+            WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.WAIT_EXPLICIT));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
     /**
      * Verify if the given web element is visible.
      *
