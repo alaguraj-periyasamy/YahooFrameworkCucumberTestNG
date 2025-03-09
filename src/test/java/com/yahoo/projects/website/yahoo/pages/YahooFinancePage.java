@@ -3,12 +3,17 @@ package com.yahoo.projects.website.yahoo.pages;
 import com.yahoo.base.WebUI;
 import com.yahoo.utils.LogUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.asserts.SoftAssert;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class YahooFinancePage {
     SoftAssert softAssert = new SoftAssert();
@@ -34,8 +39,8 @@ public class YahooFinancePage {
 
     private final By errorMessage = By.xpath("//p[contains(text(),'No results for')]");
 
-    private final By marketCloseTimeLocator = By.xpath("//span[contains(text(),'At close:')]");
-    private final By afterHoursTimeLocator = By.xpath("//span[contains(text(),'After hours:')]");
+    private final By marketCloseTimeLocator = By.xpath("(//div[@slot='marketTimeNotice']|//span[contains(text(),'After hours:')])[1]");
+    private final By afterHoursTimeLocator = By.xpath("(//div[@slot='marketTimeNotice']|//span[contains(text(),'After hours:')])[2]");
 
 
     public void openPage() {
@@ -51,11 +56,13 @@ public class YahooFinancePage {
         WebUI.clickElement(searchBtn);
         WebUI.waitForElementPresent(firstSuggestion);
     }
+
     public void invalidsearchStock(String stockSymbol) {
         WebUI.setText(searchBar, stockSymbol);
         WebUI.clickElement(searchBtn);
 
     }
+
     public boolean isDisplayed() {
         return WebUI.isElementVisible(tslaHeader, 10);
     }
@@ -101,6 +108,7 @@ public class YahooFinancePage {
         LogUtils.info("✅ Stock Details: " + stockDetails);
         return stockDetails;
     }
+
     public void verifyStockTrend(String expectedTrend) {
         String trendValue = WebUI.getTextElement(stockTrend).trim();
         String actualTrend = trendValue.contains("-") ? "Down" : "Up";  // If the value is negative, it's "Down", else "Up"
@@ -110,6 +118,7 @@ public class YahooFinancePage {
 
         softAssert.assertEquals(actualTrend, expectedTrend, "Stock trend does NOT match!");
     }
+
     public boolean isErrorMessageDisplayed() {
         return WebUI.isElementDisplayed(errorMessage);
     }
@@ -119,17 +128,20 @@ public class YahooFinancePage {
     }
 
     public String getMarketStatus() {
-        String marketCloseText = WebUI.getTextElement(marketCloseTimeLocator);
-        String afterHoursText = WebUI.getTextElement(afterHoursTimeLocator);
+        // Get elements correctly as Strings, not Lists
+        String marketCloseElements = WebUI.getTextElement(marketCloseTimeLocator);
+        String afterHoursElements = WebUI.getTextElement(afterHoursTimeLocator);
 
-        // Extract Time from text
+        LogUtils.info("✅ Market close status Status: " + marketCloseElements + " Market Open Status : " + afterHoursElements);
+
+        String marketCloseText = marketCloseElements != null ? marketCloseElements : "";
+        String afterHoursText = afterHoursElements != null ? afterHoursElements : "";
+
         String marketCloseTime = extractTime(marketCloseText);
         String afterHoursTime = extractTime(afterHoursText);
 
-        // Get Current Time
         LocalTime currentTime = LocalTime.now();
 
-        // Convert Extracted Time to LocalTime
         LocalTime closeTime = convertToTime(marketCloseTime);
         LocalTime afterTime = convertToTime(afterHoursTime);
 
@@ -143,12 +155,20 @@ public class YahooFinancePage {
     }
 
     private String extractTime(String text) {
-        return text.replaceAll(".*?(\\d{1,2}:\\d{2}:\\d{2} (AM|PM)).*", "$1");
+        Pattern pattern = Pattern.compile("(\\d{1,2}:\\d{2}:\\d{2} (AM|PM))");
+        Matcher matcher = pattern.matcher(text);
+        return matcher.find() ? matcher.group(1) : "";
     }
 
+
     private LocalTime convertToTime(String time) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("h:mm:ss a");
-        return LocalTime.parse(time, formatter);
+        try {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("h:mm:ss a");
+            return LocalTime.parse(time, formatter);
+        } catch (DateTimeParseException e) {
+            LogUtils.info("❌ Error Parsing Time: " + time);
+            return null;
+        }
     }
 
 

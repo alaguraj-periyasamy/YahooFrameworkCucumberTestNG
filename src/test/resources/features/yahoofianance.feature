@@ -31,11 +31,13 @@ Feature: Yahoo Finance Stock Search and Validation
     Examples:
       | Stock Symbol |
       | INVALID123   |
+      | 7567%&^%     |
 
   @Tc-004
   Scenario Outline: Verify if Market is Open or Closed
-      Given the user navigates to yahoo
-      When the user enters "<Stock Symbol>" in the search bar
+    Given the user navigates to yahoo
+    When the user enters "<Stock Symbol>" in the search bar
     Then the user verifies the market status
-      Examples:
-        | Stock Symbol |
+    Examples:
+      | Stock Symbol |
+      | TSLA         |
