@@ -15,7 +15,9 @@ Feature: Yahoo Finance Stock Search and Validation
     Examples:
       | Stock Symbol | Expected Price |
       | TSLA         | 200            |
-      | AAPL         | 250            |
+      | AAPL         | 200            |
+      | MS           | 100            |
+      | SNT.WA       | 200            |
 
   @Tc-002
   Scenario Outline: Validate Stock Trend (Up/Down)
@@ -24,7 +26,9 @@ Feature: Yahoo Finance Stock Search and Validation
     Examples:
       | Stock Symbol | Trend |
       | TSLA         | UP    |
-      | AAPL         | 250   |
+      | AAPL         | UP    |
+      | MS           | UP    |
+      | SNT.WA       | UP    |
 
 
   @Tc-003
@@ -45,4 +49,6 @@ Feature: Yahoo Finance Stock Search and Validation
       | Stock Symbol |
       | TSLA         |
       | AAPL         |
+      | MS           |
+      | SNT.WA       |
 
