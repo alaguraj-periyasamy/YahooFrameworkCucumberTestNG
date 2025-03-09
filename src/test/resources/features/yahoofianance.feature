@@ -32,7 +32,7 @@ Feature: Yahoo Finance Stock Search and Validation
       | Stock Symbol |
       | INVALID123   |
 
-    @Tc-004
+  @Tc-004
   Scenario Outline: Verify if Market is Open or Closed
       Given the user navigates to yahoo
       When the user enters "<Stock Symbol>" in the search bar
