@@ -1,0 +1,450 @@
+<html>
+<head>
+<title>TestNG:  Test Cucumber Signin Yahoo</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test Cucumber Signin Yahoo</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>36/6/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Mar 10 01:11:02 SGT 2025</td>
+</tr>
+<tr><td>Total time:</td><td>80484 seconds (80484229 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Stock Search Functionality", "Yahoo Finance Stock Search and Validation"</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Stock price is NOT greater than 200 expected [true] but found [false]
+	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.verifyStockPrice(YahooFinancePage.java:98)
+	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verify_stock_price(YahooSteps.java:48)
+	at ✽.the user verifies the stock price is greater than 200(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:13)
+... Removed 2 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1634350859", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1634350859'><pre>java.lang.AssertionError: The following asserts failed:
+	Stock price is NOT greater than 200 expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.verifyStockPrice(YahooFinancePage.java:98)
+	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verify_stock_price(YahooSteps.java:48)
+	at ✽.the user verifies the stock price is greater than 200(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:13)
+</pre></div></td>
+<td>36</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for an Invalid Stock Symbol", "Yahoo Finance Stock Search and Validation"</td>
+<td><div><pre>java.lang.AssertionError: ❌ Error message is NOT displayed! expected [true] but found [false]
+	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verifyErrorMessageDisplayed(YahooSteps.java:75)
+	at ✽.the user verifies an error message is displayed(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:39)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1355815204", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1355815204'><pre>java.lang.AssertionError: ❌ Error message is NOT displayed! expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verifyErrorMessageDisplayed(YahooSteps.java:75)
+	at ✽.the user verifies an error message is displayed(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:39)
+</pre></div></td>
+<td>68</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data max data", "Yahoo Finance Stock Search and Validation"</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=134.0.6998.36)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f825afee8b980a6232edc59921eea774, getElementText {id=f.2B12030B860CE1763DAD390836CF0C16.d.E02154C79B630505A5DCA035BBB29BDE.e.827}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.36, chrome: {chromedriverVersion: 134.0.6998.35 (ea6ef4c2ac15..., userDataDir: C:\Users\alagu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51951}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51951/devtoo..., se:cdpVersion: 134.0.6998.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f825afee8b980a6232edc59921eea774)] -&gt; xpath: //table[contains(@class, &apos;table yf-1jecxey&apos;)]/tbody/tr]
+Session ID: f825afee8b980a6232edc59921eea774
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+	at com.yahoo.base.WebUI.getListElementsText(WebUI.java:1272)
+	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.printHistoricalData(YahooFinancePage.java:237)
+	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.user_verifies_data_is_displayed_correctly(YahooSteps.java:97)
+	at ✽.the user verifies &quot;MAX&quot; data is displayed correctly(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:63)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1433415497", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1433415497'><pre>org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=134.0.6998.36)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f825afee8b980a6232edc59921eea774, getElementText {id=f.2B12030B860CE1763DAD390836CF0C16.d.E02154C79B630505A5DCA035BBB29BDE.e.827}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.36, chrome: {chromedriverVersion: 134.0.6998.35 (ea6ef4c2ac15..., userDataDir: C:\Users\alagu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51951}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51951/devtoo..., se:cdpVersion: 134.0.6998.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f825afee8b980a6232edc59921eea774)] -&gt; xpath: //table[contains(@class, &apos;table yf-1jecxey&apos;)]/tbody/tr]
+Session ID: f825afee8b980a6232edc59921eea774
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+	at com.yahoo.base.WebUI.getListElementsText(WebUI.java:1272)
+	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.printHistoricalData(YahooFinancePage.java:237)
+	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.user_verifies_data_is_displayed_correctly(YahooSteps.java:97)
+	at ✽.the user verifies &quot;MAX&quot; data is displayed correctly(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:63)
+</pre></div></td>
+<td>1331</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data five day", "Yahoo Finance Stock Search and Validation"</td>
+<td><div><pre>java.lang.AssertionError: ❌ The element is NOT visible. By.xpath: //input[@id=&apos;ybar-sbq&apos;]
+	at com.yahoo.base.WebUI.verifyElementVisible(WebUI.java:1959)
+	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.isPageLoaded(YahooFinancePage.java:60)
+	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.userNavigatesToYahoo(YahooSteps.java:22)
+	at ✽.the user navigates to yahoo(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:5)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1476275380", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1476275380'><pre>java.lang.AssertionError: ❌ The element is NOT visible. By.xpath: //input[@id=&apos;ybar-sbq&apos;]
+	at org.testng.Assert.fail(Assert.java:111)
+	at com.yahoo.base.WebUI.verifyElementVisible(WebUI.java:1959)
+	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.isPageLoaded(YahooFinancePage.java:60)
+	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.userNavigatesToYahoo(YahooSteps.java:22)
+	at ✽.the user navigates to yahoo(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:5)
+</pre></div></td>
+<td>44</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data max data", "Yahoo Finance Stock Search and Validation"</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=134.0.6998.36)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c40af3b10aeb5eab2a269ca3f71f33f3, getElementText {id=f.71A6679FC22B2539C5548F4FBB6E88BC.d.7C87CDF4B341FB36E782446B3B86C202.e.4561}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.36, chrome: {chromedriverVersion: 134.0.6998.35 (ea6ef4c2ac15..., userDataDir: C:\Users\alagu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55272}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55272/devtoo..., se:cdpVersion: 134.0.6998.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c40af3b10aeb5eab2a269ca3f71f33f3)] -&gt; xpath: //table[contains(@class, &apos;table yf-1jecxey&apos;)]/tbody/tr]
+Session ID: c40af3b10aeb5eab2a269ca3f71f33f3
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+	at com.yahoo.base.WebUI.getListElementsText(WebUI.java:1272)
+	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.printHistoricalData(YahooFinancePage.java:237)
+	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.user_verifies_data_is_displayed_correctly(YahooSteps.java:97)
+	at ✽.the user verifies &quot;MAX&quot; data is displayed correctly(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:63)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1189518778", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1189518778'><pre>org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=134.0.6998.36)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c40af3b10aeb5eab2a269ca3f71f33f3, getElementText {id=f.71A6679FC22B2539C5548F4FBB6E88BC.d.7C87CDF4B341FB36E782446B3B86C202.e.4561}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.36, chrome: {chromedriverVersion: 134.0.6998.35 (ea6ef4c2ac15..., userDataDir: C:\Users\alagu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55272}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55272/devtoo..., se:cdpVersion: 134.0.6998.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c40af3b10aeb5eab2a269ca3f71f33f3)] -&gt; xpath: //table[contains(@class, &apos;table yf-1jecxey&apos;)]/tbody/tr]
+Session ID: c40af3b10aeb5eab2a269ca3f71f33f3
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+	at com.yahoo.base.WebUI.getListElementsText(WebUI.java:1272)
+	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.printHistoricalData(YahooFinancePage.java:237)
+	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.user_verifies_data_is_displayed_correctly(YahooSteps.java:97)
+	at ✽.the user verifies &quot;MAX&quot; data is displayed correctly(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:63)
+</pre></div></td>
+<td>11305</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify if Market is Open or Closed", "Yahoo Finance Stock Search and Validation"</td>
+<td><div><pre>java.lang.AssertionError: ❌ Element not exist. (waitForElementPresent) By.xpath: (//div[@slot=&apos;marketTimeNotice&apos;]|//span[contains(text(),&apos;After hours:&apos;)])[2]
+	at com.yahoo.base.WebUI.waitForElementPresent(WebUI.java:3024)
+	at com.yahoo.base.WebUI.waitForElementVisible(WebUI.java:2939)
+	at com.yahoo.base.WebUI.getTextElement(WebUI.java:2697)
+	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.getMarketStatus(YahooFinancePage.java:142)
+	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verifyMarketStatus(YahooSteps.java:83)
+	at ✽.the user verifies the market status(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:50)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1418094265", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1418094265'><pre>java.lang.AssertionError: ❌ Element not exist. (waitForElementPresent) By.xpath: (//div[@slot=&apos;marketTimeNotice&apos;]|//span[contains(text(),&apos;After hours:&apos;)])[2]
+	at org.testng.Assert.fail(Assert.java:111)
+	at com.yahoo.base.WebUI.waitForElementPresent(WebUI.java:3024)
+	at com.yahoo.base.WebUI.waitForElementVisible(WebUI.java:2939)
+	at com.yahoo.base.WebUI.getTextElement(WebUI.java:2697)
+	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.getMarketStatus(YahooFinancePage.java:142)
+	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verifyMarketStatus(YahooSteps.java:83)
+	at ✽.the user verifies the market status(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:50)
+</pre></div></td>
+<td>59</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for an Invalid Stock Symbol", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>40</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for an Invalid Stock Symbol", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>38</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data five year data", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>79</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Stock Search Functionality", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>73</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Stock Search Functionality", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>15</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data One day", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>42</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data three months", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>51</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data year data", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>44</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data one year data", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>46</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify if Market is Open or Closed", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>39</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data three months", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>23</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Stock Trend (Up/Down)", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>40</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Stock Search Functionality", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>74</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data three months", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>44</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data five day", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>46</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data six months", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>47</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data five day", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>44</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data one year data", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>49</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify if Market is Open or Closed", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>59</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data One day", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>51</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify if Market is Open or Closed", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>38</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Stock Search Functionality", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>74</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Stock Trend (Up/Down)", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>93</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify if Market is Open or Closed", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>34</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data five year data", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>87</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data year data", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>41</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Stock Trend (Up/Down)", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>43</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data six months", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>45</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data one year data", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>55</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data max data", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>366</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data six months", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>51</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data One day", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>50</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Stock Trend (Up/Down)", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>39</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Stock Trend (Up/Down)", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>13</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data year data", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>43</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+<tr>
+<td title='com.yahoo.runners.TestRunnerYahoo.runScenario()'><b>runScenario</b><br>Test class: com.yahoo.runners.TestRunnerYahoo<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Historical Stock Data five year data", "Yahoo Finance Stock Search and Validation"</td>
+<td></td>
+<td>111</td>
+<td>com.yahoo.runners.TestRunnerYahoo@40368a46</td></tr>
+</table><p>
+</body>
+</html>

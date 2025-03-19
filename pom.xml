@@ -54,6 +54,7 @@
 
         <!-- Suite XML path -->
         <suite.feature.yahoo>src\test\resources\suites\SuiteFeatureYahoo.xml</suite.feature.yahoo>
+        <suite.feature>\src\test\resources\suites\SuiteFeatureYahoo.xml</suite.feature>
 
     </properties>
 
@@ -333,7 +334,7 @@
                         <version>${maven-surefire-plugin.version}</version>
                         <configuration>
                             <suiteXmlFiles>
-                                <suiteXmlFile>${suite.feature.login.cms}</suiteXmlFile>
+                                <suiteXmlFile>${suite.feature}</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>

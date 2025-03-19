@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="42" passed="36" failed="6" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-10T01:11:02 SGT" name="Suite Cucumber" finished-at="2025-03-10T23:32:27 SGT" duration-ms="80484229">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2025-03-10T01:11:02 SGT" name="Test Cucumber Signin Yahoo" finished-at="2025-03-10T23:32:27 SGT" duration-ms="80484229">
+      <class name="com.yahoo.runners.TestRunnerYahoo">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:11:02 SGT" name="setUpClass" finished-at="2025-03-10T01:11:05 SGT" duration-ms="3004" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@65e4b827]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:11:05 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:12:19 SGT" duration-ms="74019" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Stock Search Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:12:19 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:13:34 SGT" duration-ms="74354" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Stock Search Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:13:34 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:14:47 SGT" duration-ms="73747" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Stock Search Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:14:47 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:15:03 SGT" duration-ms="15974" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Stock Search Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:15:03 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:15:40 SGT" duration-ms="36644" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Stock Search Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+Stock price is NOT greater than 200 expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Stock price is NOT greater than 200 expected [true] but found [false]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.verifyStockPrice(YahooFinancePage.java:98)
+at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verify_stock_price(YahooSteps.java:48)
+at ✽.the user verifies the stock price is greater than 200(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:13)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:15:40 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:16:20 SGT" duration-ms="39490" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Stock Trend (Up/Down)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:16:20 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:16:33 SGT" duration-ms="13273" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Stock Trend (Up/Down)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:16:33 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:17:17 SGT" duration-ms="43838" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Stock Trend (Up/Down)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:17:17 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:17:57 SGT" duration-ms="40723" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Stock Trend (Up/Down)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:17:57 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:19:31 SGT" duration-ms="93519" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Stock Trend (Up/Down)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:19:31 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:20:12 SGT" duration-ms="40846" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search for an Invalid Stock Symbol"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:20:12 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:21:21 SGT" duration-ms="68893" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search for an Invalid Stock Symbol"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[❌ Error message is NOT displayed! expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: ❌ Error message is NOT displayed! expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verifyErrorMessageDisplayed(YahooSteps.java:75)
+at ✽.the user verifies an error message is displayed(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:39)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:21:21 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:21:59 SGT" duration-ms="38524" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search for an Invalid Stock Symbol"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:21:59 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:22:34 SGT" duration-ms="34691" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if Market is Open or Closed"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:22:34 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:23:13 SGT" duration-ms="39144" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if Market is Open or Closed"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:23:13 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:24:13 SGT" duration-ms="59894" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if Market is Open or Closed"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:24:13 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:25:13 SGT" duration-ms="59587" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if Market is Open or Closed"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[❌ Element not exist. (waitForElementPresent) By.xpath: (//div[@slot='marketTimeNotice']|//span[contains(text(),'After hours:')])[2]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: ❌ Element not exist. (waitForElementPresent) By.xpath: (//div[@slot='marketTimeNotice']|//span[contains(text(),'After hours:')])[2]
+at org.testng.Assert.fail(Assert.java:111)
+at com.yahoo.base.WebUI.waitForElementPresent(WebUI.java:3024)
+at com.yahoo.base.WebUI.waitForElementVisible(WebUI.java:2939)
+at com.yahoo.base.WebUI.getTextElement(WebUI.java:2697)
+at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.getMarketStatus(YahooFinancePage.java:142)
+at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verifyMarketStatus(YahooSteps.java:83)
+at ✽.the user verifies the market status(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:50)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:25:13 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:25:51 SGT" duration-ms="38894" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify if Market is Open or Closed"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:25:51 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:26:43 SGT" duration-ms="51823" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data One day"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:26:43 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:27:30 SGT" duration-ms="46257" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data five day"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:27:30 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:28:21 SGT" duration-ms="51029" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data three months"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:28:21 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:29:12 SGT" duration-ms="51321" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data six months"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:29:12 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:29:53 SGT" duration-ms="41218" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data year data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:29:53 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:30:39 SGT" duration-ms="46277" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data one year data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:30:39 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:31:59 SGT" duration-ms="79703" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data five year data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:31:59 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:38:06 SGT" duration-ms="366870" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data max data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:38:06 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:38:49 SGT" duration-ms="42780" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data One day"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:38:49 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:39:33 SGT" duration-ms="44731" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data five day"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:39:33 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:40:18 SGT" duration-ms="44930" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data three months"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:40:18 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:41:04 SGT" duration-ms="45327" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data six months"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:41:04 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:41:48 SGT" duration-ms="44278" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data year data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:41:48 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:42:44 SGT" duration-ms="55924" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data one year data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:42:44 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T01:44:35 SGT" duration-ms="111190" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data five year data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T01:44:35 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T02:06:47 SGT" duration-ms="1331616" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data max data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=134.0.6998.36)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f825afee8b980a6232edc59921eea774, getElementText {id=f.2B12030B860CE1763DAD390836CF0C16.d.E02154C79B630505A5DCA035BBB29BDE.e.827}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.36, chrome: {chromedriverVersion: 134.0.6998.35 (ea6ef4c2ac15..., userDataDir: C:\Users\alagu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51951}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51951/devtoo..., se:cdpVersion: 134.0.6998.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f825afee8b980a6232edc59921eea774)] -> xpath: //table[contains(@class, 'table yf-1jecxey')]/tbody/tr]
+Session ID: f825afee8b980a6232edc59921eea774]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=134.0.6998.36)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f825afee8b980a6232edc59921eea774, getElementText {id=f.2B12030B860CE1763DAD390836CF0C16.d.E02154C79B630505A5DCA035BBB29BDE.e.827}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.36, chrome: {chromedriverVersion: 134.0.6998.35 (ea6ef4c2ac15..., userDataDir: C:\Users\alagu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51951}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51951/devtoo..., se:cdpVersion: 134.0.6998.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f825afee8b980a6232edc59921eea774)] -> xpath: //table[contains(@class, 'table yf-1jecxey')]/tbody/tr]
+Session ID: f825afee8b980a6232edc59921eea774
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+at com.yahoo.base.WebUI.getListElementsText(WebUI.java:1272)
+at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.printHistoricalData(YahooFinancePage.java:237)
+at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.user_verifies_data_is_displayed_correctly(YahooSteps.java:97)
+at ✽.the user verifies "MAX" data is displayed correctly(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:63)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T02:06:47 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T02:07:37 SGT" duration-ms="50711" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data One day"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T02:07:37 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T02:08:22 SGT" duration-ms="44284" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data five day"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[❌ The element is NOT visible. By.xpath: //input[@id='ybar-sbq']]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: ❌ The element is NOT visible. By.xpath: //input[@id='ybar-sbq']
+at org.testng.Assert.fail(Assert.java:111)
+at com.yahoo.base.WebUI.verifyElementVisible(WebUI.java:1959)
+at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.isPageLoaded(YahooFinancePage.java:60)
+at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.userNavigatesToYahoo(YahooSteps.java:22)
+at ✽.the user navigates to yahoo(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T02:08:22 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T02:08:45 SGT" duration-ms="23749" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data three months"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T02:08:45 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T02:09:33 SGT" duration-ms="47124" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data six months"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T02:09:33 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T02:10:16 SGT" duration-ms="43037" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data year data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T02:10:16 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T02:11:05 SGT" duration-ms="49033" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data one year data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T02:11:05 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T02:12:32 SGT" duration-ms="87542" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data five year data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T02:12:32 SGT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-10T05:20:58 SGT" duration-ms="11305843" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Historical Stock Data max data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Yahoo Finance Stock Search and Validation"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=134.0.6998.36)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c40af3b10aeb5eab2a269ca3f71f33f3, getElementText {id=f.71A6679FC22B2539C5548F4FBB6E88BC.d.7C87CDF4B341FB36E782446B3B86C202.e.4561}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.36, chrome: {chromedriverVersion: 134.0.6998.35 (ea6ef4c2ac15..., userDataDir: C:\Users\alagu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55272}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55272/devtoo..., se:cdpVersion: 134.0.6998.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c40af3b10aeb5eab2a269ca3f71f33f3)] -> xpath: //table[contains(@class, 'table yf-1jecxey')]/tbody/tr]
+Session ID: c40af3b10aeb5eab2a269ca3f71f33f3]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=134.0.6998.36)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c40af3b10aeb5eab2a269ca3f71f33f3, getElementText {id=f.71A6679FC22B2539C5548F4FBB6E88BC.d.7C87CDF4B341FB36E782446B3B86C202.e.4561}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.36, chrome: {chromedriverVersion: 134.0.6998.35 (ea6ef4c2ac15..., userDataDir: C:\Users\alagu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55272}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55272/devtoo..., se:cdpVersion: 134.0.6998.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c40af3b10aeb5eab2a269ca3f71f33f3)] -> xpath: //table[contains(@class, 'table yf-1jecxey')]/tbody/tr]
+Session ID: c40af3b10aeb5eab2a269ca3f71f33f3
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+at com.yahoo.base.WebUI.getListElementsText(WebUI.java:1272)
+at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.printHistoricalData(YahooFinancePage.java:237)
+at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.user_verifies_data_is_displayed_correctly(YahooSteps.java:97)
+at ✽.the user verifies "MAX" data is displayed correctly(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:63)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.yahoo.runners.TestRunnerYahoo@40368a46]" started-at="2025-03-10T05:20:58 SGT" name="tearDownClass" finished-at="2025-03-10T23:32:26 SGT" duration-ms="65488370" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.yahoo.runners.TestRunnerYahoo -->
+    </test> <!-- Test Cucumber Signin Yahoo -->
+  </suite> <!-- Suite Cucumber -->
+</testng-results>

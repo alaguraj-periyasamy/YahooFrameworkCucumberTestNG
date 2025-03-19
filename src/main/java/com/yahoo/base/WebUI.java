@@ -823,6 +823,33 @@ public class WebUI {
         return false;
     }
 
+    public static void selectDropdownByVisibleText(By locator, String visibleText) {
+        try {
+            WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.WAIT_EXPLICIT));
+            WebElement dropdownElement = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+            Select select = new Select(dropdownElement);
+            select.selectByVisibleText(visibleText);
+            LogUtils.info("✅ Selected dropdown option: " + visibleText);
+        } catch (Exception e) {
+            LogUtils.error("❌ Failed to select dropdown option: " + visibleText, e);
+            Assert.fail("Dropdown selection failed for: " + visibleText);
+        }
+    }
+    public static String getSelectedDropdownText(By locator) {
+        try {
+            WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.WAIT_EXPLICIT));
+            WebElement dropdownElement = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+            Select select = new Select(dropdownElement);
+            String selectedText = select.getFirstSelectedOption().getText();
+            LogUtils.info("✅ Selected dropdown text: " + selectedText);
+            return selectedText;
+        } catch (Exception e) {
+            LogUtils.error("❌ Failed to get selected dropdown text", e);
+            return ""; // Return empty string if selection retrieval fails
+        }
+    }
+
+
     /**
      * Verify All Options contains the specified text (select option)
      *
@@ -2697,6 +2724,30 @@ public class WebUI {
         AllureManager.saveTextLog("==> The Text is: " + waitForElementVisible(by).getText());
         return waitForElementVisible(by).getText().trim();
     }
+    /**
+     * Retrieves a list of WebElements based on the provided XPath locator.
+     *
+     * @param by The locator of the elements (By.xpath, By.id, etc.).
+     * @return List<WebElement> containing all matching elements.
+     */
+    public static List<WebElement> getElements(By by) {
+        try {
+            List<WebElement> elements = DriverManager.getDriver().findElements(by);
+
+
+            if (elements.isEmpty()) {
+                LogUtils.warn("⚠️ No elements found for locator: " + by.toString());
+            } else {
+                LogUtils.info("✅ Found " + elements.size() + " elements for locator: " + by.toString());
+            }
+
+            return elements;
+        } catch (Exception e) {
+            LogUtils.error("❌ Error retrieving elements: " + e.getMessage());
+            return new ArrayList<>();
+        }
+    }
+
 
     /**
      * Get the value from the element's attribute
@@ -2935,7 +2986,7 @@ public class WebUI {
      * @param by an element of object type By
      * @return a WebElement object ready to be visible
      */
-    protected static WebElement waitForElementVisible(By by) {
+    public static WebElement waitForElementVisible(By by) {
         waitForElementPresent(by);
 
         try {

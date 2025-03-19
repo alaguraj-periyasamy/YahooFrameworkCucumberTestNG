@@ -1,0 +1,10 @@
+{
+   "name": "GitLab",
+   "type": "gitlab",
+   "url": "",
+   "buildOrder": 1,
+   "buildName": "e2e_test",
+   "buildUrl": " ",
+   "reportUrl": "",
+   "reportName": "Report: Test Automation with Selenium Java Cucumber"
+}

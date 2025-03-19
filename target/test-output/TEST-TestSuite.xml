@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="80486.125" tests="42" errors="0" skipped="0" failures="6">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\alagu\IdeaProjects\AutomationFrameworkCucumberTestNG-main\target\test-classes;C:\Users\alagu\IdeaProjects\AutomationFrameworkCucumberTestNG-main\target\classes;C:\Users\alagu\.m2\repository\io\rest-assured\rest-assured\5.5.1\rest-assured-5.5.1.jar;C:\Users\alagu\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\alagu\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\alagu\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\alagu\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\alagu\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\alagu\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\alagu\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\alagu\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\alagu\.m2\repository\io\rest-assured\json-path\5.5.1\json-path-5.5.1.jar;C:\Users\alagu\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\alagu\.m2\repository\io\rest-assured\rest-assured-common\5.5.1\rest-assured-common-5.5.1.jar;C:\Users\alagu\.m2\repository\io\rest-assured\xml-path\5.5.1\xml-path-5.5.1.jar;C:\Users\alagu\.m2\repository\io\rest-assured\json-schema-validator\5.5.1\json-schema-validator-5.5.1.jar;C:\Users\alagu\.m2\repository\com\github\java-json-tools\json-schema-validator\2.2.14\json-schema-validator-2.2.14.jar;C:\Users\alagu\.m2\repository\com\github\java-json-tools\jackson-coreutils-equivalence\1.0\jackson-coreutils-equivalence-1.0.jar;C:\Users\alagu\.m2\repository\com\github\java-json-tools\jackson-coreutils\2.0\jackson-coreutils-2.0.jar;C:\Users\alagu\.m2\repository\com\github\java-json-tools\msg-simple\1.2\msg-simple-1.2.jar;C:\Users\alagu\.m2\repository\com\github\java-json-tools\btf\1.3\btf-1.3.jar;C:\Users\alagu\.m2\repository\com\github\java-json-tools\json-schema-core\1.2.14\json-schema-core-1.2.14.jar;C:\Users\alagu\.m2\repository\com\github\java-json-tools\uri-template\0.10\uri-template-0.10.jar;C:\Users\alagu\.m2\repository\org\mozilla\rhino\1.7.7.2\rhino-1.7.7.2.jar;C:\Users\alagu\.m2\repository\com\sun\mail\mailapi\1.6.2\mailapi-1.6.2.jar;C:\Users\alagu\.m2\repository\joda-time\joda-time\2.10.5\joda-time-2.10.5.jar;C:\Users\alagu\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\alagu\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\alagu\.m2\repository\com\google\guava\guava\33.2.1-jre\guava-33.2.1-jre.jar;C:\Users\alagu\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\alagu\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\alagu\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\alagu\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\alagu\.m2\repository\com\google\code\gson\gson\2.12.1\gson-2.12.1.jar;C:\Users\alagu\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\alagu\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.2\jackson-databind-2.18.2.jar;C:\Users\alagu\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.2\jackson-annotations-2.18.2.jar;C:\Users\alagu\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.2\jackson-core-2.18.2.jar;C:\Users\alagu\.m2\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar;C:\Users\alagu\.m2\repository\net\datafaker\datafaker\2.4.2\datafaker-2.4.2.jar;C:\Users\alagu\.m2\repository\org\yaml\snakeyaml\2.3\snakeyaml-2.3.jar;C:\Users\alagu\.m2\repository\com\github\curious-odd-man\rgxgen\2.0\rgxgen-2.0.jar;C:\Users\alagu\.m2\repository\com\googlecode\libphonenumber\libphonenumber\8.13.50\libphonenumber-8.13.50.jar;C:\Users\alagu\.m2\repository\com\github\pengrad\java-telegram-bot-api\8.3.0\java-telegram-bot-api-8.3.0.jar;C:\Users\alagu\.m2\repository\com\squareup\okhttp3\okhttp\4.12.0\okhttp-4.12.0.jar;C:\Users\alagu\.m2\repository\com\squareup\okio\okio\3.6.0\okio-3.6.0.jar;C:\Users\alagu\.m2\repository\com\squareup\okio\okio-jvm\3.6.0\okio-jvm-3.6.0.jar;C:\Users\alagu\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-common\1.9.10\kotlin-stdlib-common-1.9.10.jar;C:\Users\alagu\.m2\repository\com\squareup\okhttp3\logging-interceptor\4.12.0\logging-interceptor-4.12.0.jar;C:\Users\alagu\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk8\1.9.22\kotlin-stdlib-jdk8-1.9.22.jar;C:\Users\alagu\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.9.22\kotlin-stdlib-1.9.22.jar;C:\Users\alagu\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar;C:\Users\alagu\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk7\1.9.22\kotlin-stdlib-jdk7-1.9.22.jar;C:\Users\alagu\.m2\repository\io\cucumber\cucumber-java\7.21.1\cucumber-java-7.21.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\cucumber-core\7.21.1\cucumber-core-7.21.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.21.1\cucumber-gherkin-messages-7.21.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\testng-xml-formatter\0.3.1\testng-xml-formatter-0.3.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\query\13.2.0\query-13.2.0.jar;C:\Users\alagu\.m2\repository\io\cucumber\tag-expressions\6.1.2\tag-expressions-6.1.2.jar;C:\Users\alagu\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\datatable\7.21.1\datatable-7.21.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\docstring\7.21.1\docstring-7.21.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\html-formatter\21.9.0\html-formatter-21.9.0.jar;C:\Users\alagu\.m2\repository\io\cucumber\junit-xml-formatter\0.7.1\junit-xml-formatter-0.7.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\alagu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\alagu\.m2\repository\io\cucumber\cucumber-testng\7.21.1\cucumber-testng-7.21.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\cucumber-picocontainer\7.21.1\cucumber-picocontainer-7.21.1.jar;C:\Users\alagu\.m2\repository\org\picocontainer\picocontainer\2.15\picocontainer-2.15.jar;C:\Users\alagu\.m2\repository\io\cucumber\cucumber-gherkin\7.21.1\cucumber-gherkin-7.21.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\cucumber-plugin\7.21.1\cucumber-plugin-7.21.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\gherkin\32.0.0\gherkin-32.0.0.jar;C:\Users\alagu\.m2\repository\io\cucumber\messages\27.2.0\messages-27.2.0.jar;C:\Users\alagu\.m2\repository\com\aventstack\extentreports\5.1.2\extentreports-5.1.2.jar;C:\Users\alagu\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\alagu\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\alagu\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\alagu\.m2\repository\tech\grasshopper\extentreports-cucumber7-adapter\1.14.0\extentreports-cucumber7-adapter-1.14.0.jar;C:\Users\alagu\.m2\repository\tech\grasshopper\extent-pdf-report\2.12.0\extent-pdf-report-2.12.0.jar;C:\Users\alagu\.m2\repository\tech\grasshopper\cucumber-pdf-report\2.14.0\cucumber-pdf-report-2.14.0.jar;C:\Users\alagu\.m2\repository\org\apache\pdfbox\pdfbox\2.0.26\pdfbox-2.0.26.jar;C:\Users\alagu\.m2\repository\org\apache\pdfbox\fontbox\2.0.26\fontbox-2.0.26.jar;C:\Users\alagu\.m2\repository\org\knowm\xchart\xchart\3.8.0\xchart-3.8.0.jar;C:\Users\alagu\.m2\repository\de\erichseifert\vectorgraphics2d\VectorGraphics2D\0.13\VectorGraphics2D-0.13.jar;C:\Users\alagu\.m2\repository\de\rototor\pdfbox\graphics2d\0.30\graphics2d-0.30.jar;C:\Users\alagu\.m2\repository\com\madgag\animated-gif-lib\1.4\animated-gif-lib-1.4.jar;C:\Users\alagu\.m2\repository\tech\grasshopper\table-layout\1.5.1\table-layout-1.5.1.jar;C:\Users\alagu\.m2\repository\tech\grasshopper\rest-assured-cucumber-pdf-report\1.5.0\rest-assured-cucumber-pdf-report-1.5.0.jar;C:\Users\alagu\.m2\repository\org\jsoup\jsoup\1.15.3\jsoup-1.15.3.jar;C:\Users\alagu\.m2\repository\com\aventstack\klov-reporter\5.1.0\klov-reporter-5.1.0.jar;C:\Users\alagu\.m2\repository\org\mongodb\mongodb-driver\3.6.4\mongodb-driver-3.6.4.jar;C:\Users\alagu\.m2\repository\org\mongodb\mongodb-driver-core\3.6.4\mongodb-driver-core-3.6.4.jar;C:\Users\alagu\.m2\repository\org\mongodb\bson\3.6.4\bson-3.6.4.jar;C:\Users\alagu\.m2\repository\tech\grasshopper\htmlextentreporter\1.1.0\htmlextentreporter-1.1.0.jar;C:\Users\alagu\.m2\repository\tech\grasshopper\extent-excel-report\1.4.0\extent-excel-report-1.4.0.jar;C:\Users\alagu\.m2\repository\io\qameta\allure\allure-cucumber7-jvm\2.29.1\allure-cucumber7-jvm-2.29.1.jar;C:\Users\alagu\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\alagu\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-java\4.29.0\selenium-java-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-api\4.29.0\selenium-api-4.29.0.jar;C:\Users\alagu\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.29.0\selenium-chrome-driver-4.29.0.jar;C:\Users\alagu\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.29.0\selenium-chromium-driver-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-json\4.29.0\selenium-json-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.29.0\selenium-manager-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v131\4.29.0\selenium-devtools-v131-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v132\4.29.0\selenium-devtools-v132-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v133\4.29.0\selenium-devtools-v133-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.29.0\selenium-devtools-v85-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.29.0\selenium-edge-driver-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.29.0\selenium-firefox-driver-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-http\4.29.0\selenium-http-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.29.0\selenium-ie-driver-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.29.0\selenium-remote-driver-4.29.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.28.0-alpha\opentelemetry-semconv-1.28.0-alpha.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-api\1.46.0\opentelemetry-api-1.46.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-context\1.46.0\opentelemetry-context-1.46.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.46.0\opentelemetry-exporter-logging-1.46.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.46.0\opentelemetry-sdk-common-1.46.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.46.0\opentelemetry-sdk-extension-autoconfigure-spi-1.46.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.46.0\opentelemetry-sdk-extension-autoconfigure-1.46.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.46.0-alpha\opentelemetry-api-incubator-1.46.0-alpha.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.46.0\opentelemetry-sdk-trace-1.46.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.46.0\opentelemetry-sdk-1.46.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.46.0\opentelemetry-sdk-metrics-1.46.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.46.0\opentelemetry-sdk-logs-1.46.0.jar;C:\Users\alagu\.m2\repository\net\bytebuddy\byte-buddy\1.15.11\byte-buddy-1.15.11.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-os\4.29.0\selenium-os-4.29.0.jar;C:\Users\alagu\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.29.0\selenium-safari-driver-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-support\4.29.0\selenium-support-4.29.0.jar;C:\Users\alagu\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\alagu\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\alagu\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\alagu\.m2\repository\com\sun\mail\javax.mail\1.6.2\javax.mail-1.6.2.jar;C:\Users\alagu\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Users\alagu\.m2\repository\org\zeroturnaround\zt-zip\1.17\zt-zip-1.17.jar;C:\Users\alagu\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\alagu\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.3\log4j-core-2.24.3.jar;C:\Users\alagu\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\alagu\.m2\repository\org\slf4j\slf4j-simple\2.0.16\slf4j-simple-2.0.16.jar;C:\Users\alagu\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\alagu\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\alagu\.m2\repository\io\qameta\allure\allure-attachments\2.29.1\allure-attachments-2.29.1.jar;C:\Users\alagu\.m2\repository\com\github\automatedowl\allure-environment-writer\1.0.0\allure-environment-writer-1.0.0.jar;C:\Users\alagu\.m2\repository\org\apache\maven\plugins\maven-compiler-plugin\3.14.0\maven-compiler-plugin-3.14.0.jar;C:\Users\alagu\.m2\repository\org\apache\maven\shared\maven-shared-utils\3.4.2\maven-shared-utils-3.4.2.jar;C:\Users\alagu\.m2\repository\org\apache\maven\shared\maven-shared-incremental\1.1\maven-shared-incremental-1.1.jar;C:\Users\alagu\.m2\repository\org\codehaus\plexus\plexus-java\1.4.0\plexus-java-1.4.0.jar;C:\Users\alagu\.m2\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;C:\Users\alagu\.m2\repository\com\thoughtworks\qdox\qdox\2.2.0\qdox-2.2.0.jar;C:\Users\alagu\.m2\repository\org\codehaus\plexus\plexus-compiler-api\2.15.0\plexus-compiler-api-2.15.0.jar;C:\Users\alagu\.m2\repository\org\codehaus\plexus\plexus-compiler-manager\2.15.0\plexus-compiler-manager-2.15.0.jar;C:\Users\alagu\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\alagu\.m2\repository\org\codehaus\plexus\plexus-xml\3.0.0\plexus-xml-3.0.0.jar;C:\Users\alagu\.m2\repository\org\codehaus\plexus\plexus-compiler-javac\2.15.0\plexus-compiler-javac-2.15.0.jar;C:\Users\alagu\.m2\repository\org\codehaus\plexus\plexus-utils\4.0.1\plexus-utils-4.0.1.jar;C:\Users\alagu\.m2\repository\org\apache\maven\plugins\maven-surefire-plugin\3.5.2\maven-surefire-plugin-3.5.2.jar;C:\Users\alagu\.m2\repository\org\apache\maven\surefire\surefire-api\3.5.2\surefire-api-3.5.2.jar;C:\Users\alagu\.m2\repository\org\apache\maven\surefire\surefire-logger-api\3.5.2\surefire-logger-api-3.5.2.jar;C:\Users\alagu\.m2\repository\org\apache\maven\surefire\surefire-shared-utils\3.5.2\surefire-shared-utils-3.5.2.jar;C:\Users\alagu\.m2\repository\org\apache\maven\surefire\surefire-extensions-api\3.5.2\surefire-extensions-api-3.5.2.jar;C:\Users\alagu\.m2\repository\org\apache\maven\surefire\maven-surefire-common\3.5.2\maven-surefire-common-3.5.2.jar;C:\Users\alagu\.m2\repository\org\apache\maven\surefire\surefire-booter\3.5.2\surefire-booter-3.5.2.jar;C:\Users\alagu\.m2\repository\org\apache\maven\surefire\surefire-extensions-spi\3.5.2\surefire-extensions-spi-3.5.2.jar;C:\Users\alagu\.m2\repository\org\apache\maven\resolver\maven-resolver-util\1.4.1\maven-resolver-util-1.4.1.jar;C:\Users\alagu\.m2\repository\org\apache\maven\resolver\maven-resolver-api\1.4.1\maven-resolver-api-1.4.1.jar;C:\Users\alagu\.m2\repository\org\apache\maven\shared\maven-common-artifact-filters\3.4.0\maven-common-artifact-filters-3.4.0.jar;C:\Users\alagu\.m2\repository\org\apache\poi\poi\5.4.0\poi-5.4.0.jar;C:\Users\alagu\.m2\repository\commons-codec\commons-codec\1.17.1\commons-codec-1.17.1.jar;C:\Users\alagu\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\alagu\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\alagu\.m2\repository\com\zaxxer\SparseBitSet\1.3\SparseBitSet-1.3.jar;C:\Users\alagu\.m2\repository\org\apache\poi\poi-ooxml\5.4.0\poi-ooxml-5.4.0.jar;C:\Users\alagu\.m2\repository\org\apache\poi\poi-ooxml-lite\5.4.0\poi-ooxml-lite-5.4.0.jar;C:\Users\alagu\.m2\repository\org\apache\xmlbeans\xmlbeans\5.3.0\xmlbeans-5.3.0.jar;C:\Users\alagu\.m2\repository\org\apache\commons\commons-compress\1.27.1\commons-compress-1.27.1.jar;C:\Users\alagu\.m2\repository\com\github\virtuald\curvesapi\1.08\curvesapi-1.08.jar;C:\Users\alagu\.m2\repository\commons-io\commons-io\2.18.0\commons-io-2.18.0.jar;C:\Users\alagu\.m2\repository\com\github\stephenc\monte\monte-screen-recorder\0.7.7.0\monte-screen-recorder-0.7.7.0.jar;C:\Users\alagu\.m2\repository\org\aeonbits\owner\owner\1.0.12\owner-1.0.12.jar;C:\Users\alagu\.m2\repository\org\projectlombok\lombok\1.18.36\lombok-1.18.36.jar;C:\Users\alagu\.m2\repository\com\mysql\mysql-connector-j\9.2.0\mysql-connector-j-9.2.0.jar;C:\Users\alagu\.m2\repository\com\google\protobuf\protobuf-java\4.29.0\protobuf-java-4.29.0.jar;C:\Users\alagu\.m2\repository\org\aspectj\aspectjweaver\1.9.22.1\aspectjweaver-1.9.22.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Singapore"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+    <property name="sun.java.command" value="C:\Users\alagu\AppData\Local\Temp\surefire12446248456510909186\surefirebooter-20250310011059923_3.jar C:\Users\alagu\AppData\Local\Temp\surefire12446248456510909186 2025-03-10T01-10-59_521-jvmRun1 surefire-20250310011059923_1tmp surefire_0-20250310011059923_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\alagu\IdeaProjects\AutomationFrameworkCucumberTestNG-main\target\test-classes;C:\Users\alagu\IdeaProjects\AutomationFrameworkCucumberTestNG-main\target\classes;C:\Users\alagu\.m2\repository\io\rest-assured\rest-assured\5.5.1\rest-assured-5.5.1.jar;C:\Users\alagu\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\alagu\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\alagu\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\alagu\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\alagu\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\alagu\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\alagu\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\alagu\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\alagu\.m2\repository\io\rest-assured\json-path\5.5.1\json-path-5.5.1.jar;C:\Users\alagu\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\alagu\.m2\repository\io\rest-assured\rest-assured-common\5.5.1\rest-assured-common-5.5.1.jar;C:\Users\alagu\.m2\repository\io\rest-assured\xml-path\5.5.1\xml-path-5.5.1.jar;C:\Users\alagu\.m2\repository\io\rest-assured\json-schema-validator\5.5.1\json-schema-validator-5.5.1.jar;C:\Users\alagu\.m2\repository\com\github\java-json-tools\json-schema-validator\2.2.14\json-schema-validator-2.2.14.jar;C:\Users\alagu\.m2\repository\com\github\java-json-tools\jackson-coreutils-equivalence\1.0\jackson-coreutils-equivalence-1.0.jar;C:\Users\alagu\.m2\repository\com\github\java-json-tools\jackson-coreutils\2.0\jackson-coreutils-2.0.jar;C:\Users\alagu\.m2\repository\com\github\java-json-tools\msg-simple\1.2\msg-simple-1.2.jar;C:\Users\alagu\.m2\repository\com\github\java-json-tools\btf\1.3\btf-1.3.jar;C:\Users\alagu\.m2\repository\com\github\java-json-tools\json-schema-core\1.2.14\json-schema-core-1.2.14.jar;C:\Users\alagu\.m2\repository\com\github\java-json-tools\uri-template\0.10\uri-template-0.10.jar;C:\Users\alagu\.m2\repository\org\mozilla\rhino\1.7.7.2\rhino-1.7.7.2.jar;C:\Users\alagu\.m2\repository\com\sun\mail\mailapi\1.6.2\mailapi-1.6.2.jar;C:\Users\alagu\.m2\repository\joda-time\joda-time\2.10.5\joda-time-2.10.5.jar;C:\Users\alagu\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\alagu\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\alagu\.m2\repository\com\google\guava\guava\33.2.1-jre\guava-33.2.1-jre.jar;C:\Users\alagu\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\alagu\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\alagu\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\alagu\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\alagu\.m2\repository\com\google\code\gson\gson\2.12.1\gson-2.12.1.jar;C:\Users\alagu\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\alagu\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.2\jackson-databind-2.18.2.jar;C:\Users\alagu\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.2\jackson-annotations-2.18.2.jar;C:\Users\alagu\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.2\jackson-core-2.18.2.jar;C:\Users\alagu\.m2\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar;C:\Users\alagu\.m2\repository\net\datafaker\datafaker\2.4.2\datafaker-2.4.2.jar;C:\Users\alagu\.m2\repository\org\yaml\snakeyaml\2.3\snakeyaml-2.3.jar;C:\Users\alagu\.m2\repository\com\github\curious-odd-man\rgxgen\2.0\rgxgen-2.0.jar;C:\Users\alagu\.m2\repository\com\googlecode\libphonenumber\libphonenumber\8.13.50\libphonenumber-8.13.50.jar;C:\Users\alagu\.m2\repository\com\github\pengrad\java-telegram-bot-api\8.3.0\java-telegram-bot-api-8.3.0.jar;C:\Users\alagu\.m2\repository\com\squareup\okhttp3\okhttp\4.12.0\okhttp-4.12.0.jar;C:\Users\alagu\.m2\repository\com\squareup\okio\okio\3.6.0\okio-3.6.0.jar;C:\Users\alagu\.m2\repository\com\squareup\okio\okio-jvm\3.6.0\okio-jvm-3.6.0.jar;C:\Users\alagu\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-common\1.9.10\kotlin-stdlib-common-1.9.10.jar;C:\Users\alagu\.m2\repository\com\squareup\okhttp3\logging-interceptor\4.12.0\logging-interceptor-4.12.0.jar;C:\Users\alagu\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk8\1.9.22\kotlin-stdlib-jdk8-1.9.22.jar;C:\Users\alagu\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.9.22\kotlin-stdlib-1.9.22.jar;C:\Users\alagu\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar;C:\Users\alagu\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk7\1.9.22\kotlin-stdlib-jdk7-1.9.22.jar;C:\Users\alagu\.m2\repository\io\cucumber\cucumber-java\7.21.1\cucumber-java-7.21.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\cucumber-core\7.21.1\cucumber-core-7.21.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.21.1\cucumber-gherkin-messages-7.21.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\testng-xml-formatter\0.3.1\testng-xml-formatter-0.3.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\query\13.2.0\query-13.2.0.jar;C:\Users\alagu\.m2\repository\io\cucumber\tag-expressions\6.1.2\tag-expressions-6.1.2.jar;C:\Users\alagu\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\datatable\7.21.1\datatable-7.21.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\docstring\7.21.1\docstring-7.21.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\html-formatter\21.9.0\html-formatter-21.9.0.jar;C:\Users\alagu\.m2\repository\io\cucumber\junit-xml-formatter\0.7.1\junit-xml-formatter-0.7.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\alagu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\alagu\.m2\repository\io\cucumber\cucumber-testng\7.21.1\cucumber-testng-7.21.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\cucumber-picocontainer\7.21.1\cucumber-picocontainer-7.21.1.jar;C:\Users\alagu\.m2\repository\org\picocontainer\picocontainer\2.15\picocontainer-2.15.jar;C:\Users\alagu\.m2\repository\io\cucumber\cucumber-gherkin\7.21.1\cucumber-gherkin-7.21.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\cucumber-plugin\7.21.1\cucumber-plugin-7.21.1.jar;C:\Users\alagu\.m2\repository\io\cucumber\gherkin\32.0.0\gherkin-32.0.0.jar;C:\Users\alagu\.m2\repository\io\cucumber\messages\27.2.0\messages-27.2.0.jar;C:\Users\alagu\.m2\repository\com\aventstack\extentreports\5.1.2\extentreports-5.1.2.jar;C:\Users\alagu\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\alagu\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\alagu\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\alagu\.m2\repository\tech\grasshopper\extentreports-cucumber7-adapter\1.14.0\extentreports-cucumber7-adapter-1.14.0.jar;C:\Users\alagu\.m2\repository\tech\grasshopper\extent-pdf-report\2.12.0\extent-pdf-report-2.12.0.jar;C:\Users\alagu\.m2\repository\tech\grasshopper\cucumber-pdf-report\2.14.0\cucumber-pdf-report-2.14.0.jar;C:\Users\alagu\.m2\repository\org\apache\pdfbox\pdfbox\2.0.26\pdfbox-2.0.26.jar;C:\Users\alagu\.m2\repository\org\apache\pdfbox\fontbox\2.0.26\fontbox-2.0.26.jar;C:\Users\alagu\.m2\repository\org\knowm\xchart\xchart\3.8.0\xchart-3.8.0.jar;C:\Users\alagu\.m2\repository\de\erichseifert\vectorgraphics2d\VectorGraphics2D\0.13\VectorGraphics2D-0.13.jar;C:\Users\alagu\.m2\repository\de\rototor\pdfbox\graphics2d\0.30\graphics2d-0.30.jar;C:\Users\alagu\.m2\repository\com\madgag\animated-gif-lib\1.4\animated-gif-lib-1.4.jar;C:\Users\alagu\.m2\repository\tech\grasshopper\table-layout\1.5.1\table-layout-1.5.1.jar;C:\Users\alagu\.m2\repository\tech\grasshopper\rest-assured-cucumber-pdf-report\1.5.0\rest-assured-cucumber-pdf-report-1.5.0.jar;C:\Users\alagu\.m2\repository\org\jsoup\jsoup\1.15.3\jsoup-1.15.3.jar;C:\Users\alagu\.m2\repository\com\aventstack\klov-reporter\5.1.0\klov-reporter-5.1.0.jar;C:\Users\alagu\.m2\repository\org\mongodb\mongodb-driver\3.6.4\mongodb-driver-3.6.4.jar;C:\Users\alagu\.m2\repository\org\mongodb\mongodb-driver-core\3.6.4\mongodb-driver-core-3.6.4.jar;C:\Users\alagu\.m2\repository\org\mongodb\bson\3.6.4\bson-3.6.4.jar;C:\Users\alagu\.m2\repository\tech\grasshopper\htmlextentreporter\1.1.0\htmlextentreporter-1.1.0.jar;C:\Users\alagu\.m2\repository\tech\grasshopper\extent-excel-report\1.4.0\extent-excel-report-1.4.0.jar;C:\Users\alagu\.m2\repository\io\qameta\allure\allure-cucumber7-jvm\2.29.1\allure-cucumber7-jvm-2.29.1.jar;C:\Users\alagu\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\alagu\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-java\4.29.0\selenium-java-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-api\4.29.0\selenium-api-4.29.0.jar;C:\Users\alagu\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.29.0\selenium-chrome-driver-4.29.0.jar;C:\Users\alagu\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.29.0\selenium-chromium-driver-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-json\4.29.0\selenium-json-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.29.0\selenium-manager-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v131\4.29.0\selenium-devtools-v131-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v132\4.29.0\selenium-devtools-v132-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v133\4.29.0\selenium-devtools-v133-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.29.0\selenium-devtools-v85-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.29.0\selenium-edge-driver-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.29.0\selenium-firefox-driver-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-http\4.29.0\selenium-http-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.29.0\selenium-ie-driver-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.29.0\selenium-remote-driver-4.29.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.28.0-alpha\opentelemetry-semconv-1.28.0-alpha.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-api\1.46.0\opentelemetry-api-1.46.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-context\1.46.0\opentelemetry-context-1.46.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.46.0\opentelemetry-exporter-logging-1.46.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.46.0\opentelemetry-sdk-common-1.46.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.46.0\opentelemetry-sdk-extension-autoconfigure-spi-1.46.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.46.0\opentelemetry-sdk-extension-autoconfigure-1.46.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.46.0-alpha\opentelemetry-api-incubator-1.46.0-alpha.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.46.0\opentelemetry-sdk-trace-1.46.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.46.0\opentelemetry-sdk-1.46.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.46.0\opentelemetry-sdk-metrics-1.46.0.jar;C:\Users\alagu\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.46.0\opentelemetry-sdk-logs-1.46.0.jar;C:\Users\alagu\.m2\repository\net\bytebuddy\byte-buddy\1.15.11\byte-buddy-1.15.11.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-os\4.29.0\selenium-os-4.29.0.jar;C:\Users\alagu\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.29.0\selenium-safari-driver-4.29.0.jar;C:\Users\alagu\.m2\repository\org\seleniumhq\selenium\selenium-support\4.29.0\selenium-support-4.29.0.jar;C:\Users\alagu\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\alagu\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\alagu\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\alagu\.m2\repository\com\sun\mail\javax.mail\1.6.2\javax.mail-1.6.2.jar;C:\Users\alagu\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Users\alagu\.m2\repository\org\zeroturnaround\zt-zip\1.17\zt-zip-1.17.jar;C:\Users\alagu\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\alagu\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.3\log4j-core-2.24.3.jar;C:\Users\alagu\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\alagu\.m2\repository\org\slf4j\slf4j-simple\2.0.16\slf4j-simple-2.0.16.jar;C:\Users\alagu\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\alagu\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\alagu\.m2\repository\io\qameta\allure\allure-attachments\2.29.1\allure-attachments-2.29.1.jar;C:\Users\alagu\.m2\repository\com\github\automatedowl\allure-environment-writer\1.0.0\allure-environment-writer-1.0.0.jar;C:\Users\alagu\.m2\repository\org\apache\maven\plugins\maven-compiler-plugin\3.14.0\maven-compiler-plugin-3.14.0.jar;C:\Users\alagu\.m2\repository\org\apache\maven\shared\maven-shared-utils\3.4.2\maven-shared-utils-3.4.2.jar;C:\Users\alagu\.m2\repository\org\apache\maven\shared\maven-shared-incremental\1.1\maven-shared-incremental-1.1.jar;C:\Users\alagu\.m2\repository\org\codehaus\plexus\plexus-java\1.4.0\plexus-java-1.4.0.jar;C:\Users\alagu\.m2\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;C:\Users\alagu\.m2\repository\com\thoughtworks\qdox\qdox\2.2.0\qdox-2.2.0.jar;C:\Users\alagu\.m2\repository\org\codehaus\plexus\plexus-compiler-api\2.15.0\plexus-compiler-api-2.15.0.jar;C:\Users\alagu\.m2\repository\org\codehaus\plexus\plexus-compiler-manager\2.15.0\plexus-compiler-manager-2.15.0.jar;C:\Users\alagu\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\alagu\.m2\repository\org\codehaus\plexus\plexus-xml\3.0.0\plexus-xml-3.0.0.jar;C:\Users\alagu\.m2\repository\org\codehaus\plexus\plexus-compiler-javac\2.15.0\plexus-compiler-javac-2.15.0.jar;C:\Users\alagu\.m2\repository\org\codehaus\plexus\plexus-utils\4.0.1\plexus-utils-4.0.1.jar;C:\Users\alagu\.m2\repository\org\apache\maven\plugins\maven-surefire-plugin\3.5.2\maven-surefire-plugin-3.5.2.jar;C:\Users\alagu\.m2\repository\org\apache\maven\surefire\surefire-api\3.5.2\surefire-api-3.5.2.jar;C:\Users\alagu\.m2\repository\org\apache\maven\surefire\surefire-logger-api\3.5.2\surefire-logger-api-3.5.2.jar;C:\Users\alagu\.m2\repository\org\apache\maven\surefire\surefire-shared-utils\3.5.2\surefire-shared-utils-3.5.2.jar;C:\Users\alagu\.m2\repository\org\apache\maven\surefire\surefire-extensions-api\3.5.2\surefire-extensions-api-3.5.2.jar;C:\Users\alagu\.m2\repository\org\apache\maven\surefire\maven-surefire-common\3.5.2\maven-surefire-common-3.5.2.jar;C:\Users\alagu\.m2\repository\org\apache\maven\surefire\surefire-booter\3.5.2\surefire-booter-3.5.2.jar;C:\Users\alagu\.m2\repository\org\apache\maven\surefire\surefire-extensions-spi\3.5.2\surefire-extensions-spi-3.5.2.jar;C:\Users\alagu\.m2\repository\org\apache\maven\resolver\maven-resolver-util\1.4.1\maven-resolver-util-1.4.1.jar;C:\Users\alagu\.m2\repository\org\apache\maven\resolver\maven-resolver-api\1.4.1\maven-resolver-api-1.4.1.jar;C:\Users\alagu\.m2\repository\org\apache\maven\shared\maven-common-artifact-filters\3.4.0\maven-common-artifact-filters-3.4.0.jar;C:\Users\alagu\.m2\repository\org\apache\poi\poi\5.4.0\poi-5.4.0.jar;C:\Users\alagu\.m2\repository\commons-codec\commons-codec\1.17.1\commons-codec-1.17.1.jar;C:\Users\alagu\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\alagu\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\alagu\.m2\repository\com\zaxxer\SparseBitSet\1.3\SparseBitSet-1.3.jar;C:\Users\alagu\.m2\repository\org\apache\poi\poi-ooxml\5.4.0\poi-ooxml-5.4.0.jar;C:\Users\alagu\.m2\repository\org\apache\poi\poi-ooxml-lite\5.4.0\poi-ooxml-lite-5.4.0.jar;C:\Users\alagu\.m2\repository\org\apache\xmlbeans\xmlbeans\5.3.0\xmlbeans-5.3.0.jar;C:\Users\alagu\.m2\repository\org\apache\commons\commons-compress\1.27.1\commons-compress-1.27.1.jar;C:\Users\alagu\.m2\repository\com\github\virtuald\curvesapi\1.08\curvesapi-1.08.jar;C:\Users\alagu\.m2\repository\commons-io\commons-io\2.18.0\commons-io-2.18.0.jar;C:\Users\alagu\.m2\repository\com\github\stephenc\monte\monte-screen-recorder\0.7.7.0\monte-screen-recorder-0.7.7.0.jar;C:\Users\alagu\.m2\repository\org\aeonbits\owner\owner\1.0.12\owner-1.0.12.jar;C:\Users\alagu\.m2\repository\org\projectlombok\lombok\1.18.36\lombok-1.18.36.jar;C:\Users\alagu\.m2\repository\com\mysql\mysql-connector-j\9.2.0\mysql-connector-j-9.2.0.jar;C:\Users\alagu\.m2\repository\com\google\protobuf\protobuf-java\4.29.0\protobuf-java-4.29.0.jar;C:\Users\alagu\.m2\repository\org\aspectj\aspectjweaver\1.9.22.1\aspectjweaver-1.9.22.1.jar;"/>
+    <property name="allure.results.directory" value="target/allure-results"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\alagu"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-10-17"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\alagu\IdeaProjects\AutomationFrameworkCucumberTestNG-main"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\alagu\AppData\Local\Temp\surefire12446248456510909186\surefirebooter-20250310011059923_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.1+12-LTS-29"/>
+    <property name="user.name" value="alagu"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\alagu\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\alagu\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.1"/>
+    <property name="user.dir" value="C:\Users\alagu\IdeaProjects\AutomationFrameworkCucumberTestNG-main"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Microsoft\jdk-17.0.8.7-hotspot\bin;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Maven\apache-maven-3.9.6\bin;C:\Users\alagu\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Users\alagu\AppData\Local\Android\Sdk\platform-tools;C:\Users\alagu\AppData\Local\Android\Sdk\cmdline-tools;C:\Program Files\MySQL\MySQL Server 8.3\bin;C:\Program Files\Docker\Docker\resources\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\alagu\AppData\Local\Android\Sdk\emulator;C:\Program Files\Microsoft\jdk-17.0.8.7-hotspot\bin;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Maven\apache-maven-3.9.6\bin;C:\Users\alagu\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Users\alagu\AppData\Local\Android\Sdk\platform-tools;C:\Users\alagu\AppData\Local\Android\Sdk\cmdline-tools;C:\Program Files\MySQL\MySQL Server 8.3\bin;C:\Program Files\Docker\Docker\resources\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\alagu\AppData\Local\Android\Sdk\emulator;C:\Program Files\Microsoft\jdk-17.0.8.7-hotspot\bi;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.1+12-LTS-29"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="runScenario[&quot;Verify Stock Search Functionality&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](1)" classname="com.yahoo.runners.TestRunnerYahoo" time="74.017"/>
+  <testcase name="runScenario[&quot;Verify Stock Search Functionality&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](2)" classname="com.yahoo.runners.TestRunnerYahoo" time="74.352"/>
+  <testcase name="runScenario[&quot;Verify Stock Search Functionality&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](3)" classname="com.yahoo.runners.TestRunnerYahoo" time="73.748"/>
+  <testcase name="runScenario[&quot;Verify Stock Search Functionality&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](4)" classname="com.yahoo.runners.TestRunnerYahoo" time="15.973"/>
+  <testcase name="runScenario[&quot;Verify Stock Search Functionality&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](5)" classname="com.yahoo.runners.TestRunnerYahoo" time="36.657">
+    <failure message="The following asserts failed:&#10;	Stock price is NOT greater than 200 expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+The following asserts failed:
+	Stock price is NOT greater than 200 expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.verifyStockPrice(YahooFinancePage.java:98)
+	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verify_stock_price(YahooSteps.java:48)
+	at ✽.the user verifies the stock price is greater than 200(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:13)
+]]></failure>
+    <system-out><![CDATA[
+@Yahoo @Tc-001
+Scenario Outline: Verify Stock Search Functionality            # src/test/resources/features/yahoofianance.feature:21
+[INFO] 10-03-2025 01:15:04 [LogUtils] - Running Scenario Name: Verify Stock Search Functionality
+[INFO] 10-03-2025 01:15:04 [LogUtils] - Navigating to Yahoo Finance...
+[INFO] 10-03-2025 01:15:33 [LogUtils] - Open website with URL: https://finance.yahoo.com/
+[INFO] 10-03-2025 01:15:33 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@42e0f71e
+
+    Embedding openwebsite_10032025_011533 [image/png 630710 bytes]
+
+[INFO] 10-03-2025 01:15:34 [LogUtils] - Verify element visible By.xpath: //input[@id='ybar-sbq']
+  Given the user navigates to yahoo                            # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.userNavigatesToYahoo()
+
+    Embedding Screenshot step [image/png 1031895 bytes]
+
+[INFO] 10-03-2025 01:15:34 [LogUtils] - Searching for stock: AMZN
+[INFO] 10-03-2025 01:15:34 [LogUtils] - Set text AMZN on By.xpath: //input[@id='ybar-sbq']
+[INFO] 10-03-2025 01:15:34 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@42e0f71e
+
+    Embedding settext_10032025_011534 [image/png 1021734 bytes]
+
+[INFO] 10-03-2025 01:15:35 [LogUtils] - Clicked on the element By.xpath: //button[@type='submit']
+[INFO] 10-03-2025 01:15:35 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@42e0f71e
+
+    Embedding clickelement_10032025_011535 [image/png 1035529 bytes]
+
+  When the user enters "AMZN" in the search bar                # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.userEntersStockSymbol(java.lang.String)
+
+    Embedding Screenshot step [image/png 975455 bytes]
+
+  Then the user verify the tsla header should appear           # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verifyTSLAAppears()
+
+    Embedding Screenshot step [image/png 213713 bytes]
+
+[INFO] 10-03-2025 01:15:38 [LogUtils] - Scroll to position X = 0 ; Y = 400
+[INFO] 10-03-2025 01:15:38 [LogUtils] - Driver for Screenshot: ChromeDriver: chrome on windows (751d04d0fafe2156488a681c12b706ec)
+[INFO] 10-03-2025 01:15:38 [LogUtils] - Screenshot taken: homescreen
+[INFO] 10-03-2025 01:15:38 [LogUtils] - Get Current URL: https://finance.yahoo.com/quote/AMZN/
+[INFO] 10-03-2025 01:15:38 [LogUtils] - Screenshot taken current URL: https://finance.yahoo.com/quote/AMZN/
+  Then the user scroll down                                    # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.user_scrolls_down()
+
+    Embedding Screenshot step [image/png 350626 bytes]
+
+  Then the user verifies the stock page header contains "AMZN" # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verify_stock_page_header(java.lang.String)
+
+    Embedding Screenshot step [image/png 350626 bytes]
+
+[INFO] 10-03-2025 01:15:39 [LogUtils] - ✅ Actual Stock Price: 199.25
+[WARN] 10-03-2025 01:15:39 [LogUtils] - ⚠️ Stock price is less than or equal to 200
+  Then the user verifies the stock price is greater than 200   # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verify_stock_price(int)
+      java.lang.AssertionError: The following asserts failed:
+      	Stock price is NOT greater than 200 expected [true] but found [false]
+      	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+      	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+      	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.verifyStockPrice(YahooFinancePage.java:98)
+      	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verify_stock_price(YahooSteps.java:48)
+      	at ✽.the user verifies the stock price is greater than 200(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:13)
+
+    Embedding Screenshot failed step [image/png 356518 bytes]
+
+
+    Embedding Screenshot step [image/png 355418 bytes]
+
+  Then the user captures all stock details                     # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.captureAllStockDetails()
+]]></system-out>
+    <system-err><![CDATA[Mar 10, 2025 1:15:04 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 134, returning the closest version; found: 133; Please update to a Selenium version that supports CDP version 134
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Validate Stock Trend (Up/Down)&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](6)" classname="com.yahoo.runners.TestRunnerYahoo" time="39.488"/>
+  <testcase name="runScenario[&quot;Validate Stock Trend (Up/Down)&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](7)" classname="com.yahoo.runners.TestRunnerYahoo" time="13.272"/>
+  <testcase name="runScenario[&quot;Validate Stock Trend (Up/Down)&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](8)" classname="com.yahoo.runners.TestRunnerYahoo" time="43.838"/>
+  <testcase name="runScenario[&quot;Validate Stock Trend (Up/Down)&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](9)" classname="com.yahoo.runners.TestRunnerYahoo" time="40.723"/>
+  <testcase name="runScenario[&quot;Validate Stock Trend (Up/Down)&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](10)" classname="com.yahoo.runners.TestRunnerYahoo" time="93.519"/>
+  <testcase name="runScenario[&quot;Search for an Invalid Stock Symbol&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](11)" classname="com.yahoo.runners.TestRunnerYahoo" time="40.846"/>
+  <testcase name="runScenario[&quot;Search for an Invalid Stock Symbol&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](12)" classname="com.yahoo.runners.TestRunnerYahoo" time="68.894">
+    <failure message="❌ Error message is NOT displayed! expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: ❌ Error message is NOT displayed! expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verifyErrorMessageDisplayed(YahooSteps.java:75)
+	at ✽.the user verifies an error message is displayed(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:39)
+]]></failure>
+    <system-out><![CDATA[
+@Yahoo @Tc-003
+Scenario Outline: Search for an Invalid Stock Symbol             # src/test/resources/features/yahoofianance.feature:44
+[INFO] 10-03-2025 01:20:13 [LogUtils] - Running Scenario Name: Search for an Invalid Stock Symbol
+[INFO] 10-03-2025 01:20:13 [LogUtils] - Navigating to Yahoo Finance...
+[INFO] 10-03-2025 01:21:05 [LogUtils] - Open website with URL: https://finance.yahoo.com/
+[INFO] 10-03-2025 01:21:05 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@5accbeae
+
+    Embedding openwebsite_10032025_012105 [image/png 888061 bytes]
+
+[INFO] 10-03-2025 01:21:05 [LogUtils] - Verify element visible By.xpath: //input[@id='ybar-sbq']
+  Given the user navigates to yahoo                              # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.userNavigatesToYahoo()
+
+    Embedding Screenshot step [image/png 888061 bytes]
+
+[INFO] 10-03-2025 01:21:05 [LogUtils] - Searching for stock: 7567%&^%
+[INFO] 10-03-2025 01:21:06 [LogUtils] - Set text 7567%&^% on By.xpath: //input[@id='ybar-sbq']
+[INFO] 10-03-2025 01:21:06 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@5accbeae
+
+    Embedding settext_10032025_012106 [image/png 878975 bytes]
+
+[INFO] 10-03-2025 01:21:09 [LogUtils] - Clicked on the element By.xpath: //button[@type='submit']
+[INFO] 10-03-2025 01:21:09 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@5accbeae
+
+    Embedding clickelement_10032025_012109 [image/png 148516 bytes]
+
+  When the user enters "7567%&^%" in the search bar invalid data # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.userEntersinvalidStockSymbol(java.lang.String)
+
+    Embedding Screenshot step [image/png 414094 bytes]
+
+[INFO] 10-03-2025 01:21:20 [LogUtils] - ❌ Element is NOT visible: By.xpath: //p[contains(text(),'No results for')]
+  Then the user verifies an error message is displayed           # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verifyErrorMessageDisplayed()
+      java.lang.AssertionError: ❌ Error message is NOT displayed! expected [true] but found [false]
+      	at org.testng.Assert.fail(Assert.java:111)
+      	at org.testng.Assert.failNotEquals(Assert.java:1590)
+      	at org.testng.Assert.assertTrue(Assert.java:57)
+      	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verifyErrorMessageDisplayed(YahooSteps.java:75)
+      	at ✽.the user verifies an error message is displayed(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:39)
+
+    Embedding Screenshot failed step [image/png 414094 bytes]
+
+
+    Embedding Screenshot step [image/png 414094 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Mar 10, 2025 1:20:13 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 134, returning the closest version; found: 133; Please update to a Selenium version that supports CDP version 134
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Search for an Invalid Stock Symbol&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](13)" classname="com.yahoo.runners.TestRunnerYahoo" time="38.523"/>
+  <testcase name="runScenario[&quot;Verify if Market is Open or Closed&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](14)" classname="com.yahoo.runners.TestRunnerYahoo" time="34.691"/>
+  <testcase name="runScenario[&quot;Verify if Market is Open or Closed&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](15)" classname="com.yahoo.runners.TestRunnerYahoo" time="39.143"/>
+  <testcase name="runScenario[&quot;Verify if Market is Open or Closed&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](16)" classname="com.yahoo.runners.TestRunnerYahoo" time="59.892"/>
+  <testcase name="runScenario[&quot;Verify if Market is Open or Closed&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](17)" classname="com.yahoo.runners.TestRunnerYahoo" time="59.587">
+    <failure message="❌ Element not exist. (waitForElementPresent) By.xpath: (//div[@slot=&apos;marketTimeNotice&apos;]|//span[contains(text(),&apos;After hours:&apos;)])[2]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: ❌ Element not exist. (waitForElementPresent) By.xpath: (//div[@slot='marketTimeNotice']|//span[contains(text(),'After hours:')])[2]
+	at org.testng.Assert.fail(Assert.java:111)
+	at com.yahoo.base.WebUI.waitForElementPresent(WebUI.java:3024)
+	at com.yahoo.base.WebUI.waitForElementVisible(WebUI.java:2939)
+	at com.yahoo.base.WebUI.getTextElement(WebUI.java:2697)
+	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.getMarketStatus(YahooFinancePage.java:142)
+	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verifyMarketStatus(YahooSteps.java:83)
+	at ✽.the user verifies the market status(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:50)
+]]></failure>
+    <system-out><![CDATA[
+@Yahoo @Tc-004
+Scenario Outline: Verify if Market is Open or Closed # src/test/resources/features/yahoofianance.feature:56
+[INFO] 10-03-2025 01:24:14 [LogUtils] - Running Scenario Name: Verify if Market is Open or Closed
+[INFO] 10-03-2025 01:24:14 [LogUtils] - Navigating to Yahoo Finance...
+[INFO] 10-03-2025 01:24:57 [LogUtils] - Open website with URL: https://finance.yahoo.com/
+[INFO] 10-03-2025 01:24:57 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@4f488f4c
+
+    Embedding openwebsite_10032025_012457 [image/png 718460 bytes]
+
+[INFO] 10-03-2025 01:24:58 [LogUtils] - Verify element visible By.xpath: //input[@id='ybar-sbq']
+  Given the user navigates to yahoo                  # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.userNavigatesToYahoo()
+
+    Embedding Screenshot step [image/png 718460 bytes]
+
+[INFO] 10-03-2025 01:24:58 [LogUtils] - Searching for stock: SNT.WA
+[INFO] 10-03-2025 01:24:58 [LogUtils] - Set text SNT.WA on By.xpath: //input[@id='ybar-sbq']
+[INFO] 10-03-2025 01:24:58 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@4f488f4c
+
+    Embedding settext_10032025_012458 [image/png 706934 bytes]
+
+[INFO] 10-03-2025 01:24:59 [LogUtils] - Clicked on the element By.xpath: //button[@type='submit']
+[INFO] 10-03-2025 01:24:59 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@4f488f4c
+
+    Embedding clickelement_10032025_012459 [image/png 722313 bytes]
+
+  When the user enters "SNT.WA" in the search bar    # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.userEntersStockSymbol(java.lang.String)
+
+    Embedding Screenshot step [image/png 657937 bytes]
+
+[ERROR] 10-03-2025 01:25:12 [LogUtils] - ❌ Element not exist. (waitForElementPresent) By.xpath: (//div[@slot='marketTimeNotice']|//span[contains(text(),'After hours:')])[2]
+  Then the user verifies the market status           # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verifyMarketStatus()
+      java.lang.AssertionError: ❌ Element not exist. (waitForElementPresent) By.xpath: (//div[@slot='marketTimeNotice']|//span[contains(text(),'After hours:')])[2]
+      	at org.testng.Assert.fail(Assert.java:111)
+      	at com.yahoo.base.WebUI.waitForElementPresent(WebUI.java:3024)
+      	at com.yahoo.base.WebUI.waitForElementVisible(WebUI.java:2939)
+      	at com.yahoo.base.WebUI.getTextElement(WebUI.java:2697)
+      	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.getMarketStatus(YahooFinancePage.java:142)
+      	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.verifyMarketStatus(YahooSteps.java:83)
+      	at ✽.the user verifies the market status(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:50)
+
+    Embedding Screenshot failed step [image/png 434751 bytes]
+
+
+    Embedding Screenshot step [image/png 434751 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Mar 10, 2025 1:24:14 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 134, returning the closest version; found: 133; Please update to a Selenium version that supports CDP version 134
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify if Market is Open or Closed&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](18)" classname="com.yahoo.runners.TestRunnerYahoo" time="38.894"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data One day&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](19)" classname="com.yahoo.runners.TestRunnerYahoo" time="51.825"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data five day&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](20)" classname="com.yahoo.runners.TestRunnerYahoo" time="46.256"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data three months&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](21)" classname="com.yahoo.runners.TestRunnerYahoo" time="51.03"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data six months&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](22)" classname="com.yahoo.runners.TestRunnerYahoo" time="51.321"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data year data&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](23)" classname="com.yahoo.runners.TestRunnerYahoo" time="41.218"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data one year data&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](24)" classname="com.yahoo.runners.TestRunnerYahoo" time="46.277"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data five year data&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](25)" classname="com.yahoo.runners.TestRunnerYahoo" time="79.703"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data max data&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](26)" classname="com.yahoo.runners.TestRunnerYahoo" time="366.87"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data One day&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](27)" classname="com.yahoo.runners.TestRunnerYahoo" time="42.779"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data five day&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](28)" classname="com.yahoo.runners.TestRunnerYahoo" time="44.732"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data three months&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](29)" classname="com.yahoo.runners.TestRunnerYahoo" time="44.93"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data six months&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](30)" classname="com.yahoo.runners.TestRunnerYahoo" time="45.328"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data year data&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](31)" classname="com.yahoo.runners.TestRunnerYahoo" time="44.277"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data one year data&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](32)" classname="com.yahoo.runners.TestRunnerYahoo" time="55.925"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data five year data&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](33)" classname="com.yahoo.runners.TestRunnerYahoo" time="111.189"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data max data&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](34)" classname="com.yahoo.runners.TestRunnerYahoo" time="1331.625">
+    <failure message="invalid session id: session deleted as the browser has closed the connection&#10;from disconnected: Unable to receive message from renderer&#10;  (Session info: chrome=134.0.6998.36)&#10;Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;&#10;System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [f825afee8b980a6232edc59921eea774, getElementText {id=f.2B12030B860CE1763DAD390836CF0C16.d.E02154C79B630505A5DCA035BBB29BDE.e.827}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.36, chrome: {chromedriverVersion: 134.0.6998.35 (ea6ef4c2ac15..., userDataDir: C:\Users\alagu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51951}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51951/devtoo..., se:cdpVersion: 134.0.6998.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on windows (f825afee8b980a6232edc59921eea774)] -&gt; xpath: //table[contains(@class, &apos;table yf-1jecxey&apos;)]/tbody/tr]&#10;Session ID: f825afee8b980a6232edc59921eea774" type="org.openqa.selenium.NoSuchSessionException"><![CDATA[org.openqa.selenium.NoSuchSessionException: 
+invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=134.0.6998.36)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f825afee8b980a6232edc59921eea774, getElementText {id=f.2B12030B860CE1763DAD390836CF0C16.d.E02154C79B630505A5DCA035BBB29BDE.e.827}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.36, chrome: {chromedriverVersion: 134.0.6998.35 (ea6ef4c2ac15..., userDataDir: C:\Users\alagu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51951}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51951/devtoo..., se:cdpVersion: 134.0.6998.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f825afee8b980a6232edc59921eea774)] -> xpath: //table[contains(@class, 'table yf-1jecxey')]/tbody/tr]
+Session ID: f825afee8b980a6232edc59921eea774
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+	at com.yahoo.base.WebUI.getListElementsText(WebUI.java:1272)
+	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.printHistoricalData(YahooFinancePage.java:237)
+	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.user_verifies_data_is_displayed_correctly(YahooSteps.java:97)
+	at ✽.the user verifies "MAX" data is displayed correctly(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:63)
+]]></failure>
+    <system-out><![CDATA[
+@Yahoo @Tc-005
+Scenario Outline: Validate Historical Stock Data max data  # src/test/resources/features/yahoofianance.feature:81
+[INFO] 10-03-2025 01:44:36 [LogUtils] - Running Scenario Name: Validate Historical Stock Data max data
+[INFO] 10-03-2025 01:44:36 [LogUtils] - Navigating to Yahoo Finance...
+[INFO] 10-03-2025 01:45:38 [LogUtils] - Open website with URL: https://finance.yahoo.com/
+[INFO] 10-03-2025 01:45:38 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@21be0ce3
+
+    Embedding openwebsite_10032025_014538 [image/png 776248 bytes]
+
+[INFO] 10-03-2025 01:45:39 [LogUtils] - Verify element visible By.xpath: //input[@id='ybar-sbq']
+  Given the user navigates to yahoo                        # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.userNavigatesToYahoo()
+
+    Embedding Screenshot step [image/png 775144 bytes]
+
+[INFO] 10-03-2025 01:45:39 [LogUtils] - Searching for stock: AAPL
+[INFO] 10-03-2025 01:45:40 [LogUtils] - Set text AAPL on By.xpath: //input[@id='ybar-sbq']
+[INFO] 10-03-2025 01:45:40 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@21be0ce3
+
+    Embedding settext_10032025_014540 [image/png 764962 bytes]
+
+[INFO] 10-03-2025 01:45:40 [LogUtils] - Clicked on the element By.xpath: //button[@type='submit']
+[INFO] 10-03-2025 01:45:40 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@21be0ce3
+
+    Embedding clickelement_10032025_014540 [image/png 779091 bytes]
+
+  When the user enters "AAPL" in the search bar            # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.userEntersStockSymbol(java.lang.String)
+
+    Embedding Screenshot step [image/png 765153 bytes]
+
+[INFO] 10-03-2025 01:45:46 [LogUtils] - Clicked on the element By.xpath: //a[contains(@category, 'history') and text()]
+[INFO] 10-03-2025 01:45:46 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@21be0ce3
+
+    Embedding clickelement_10032025_014546 [image/png 691397 bytes]
+
+[INFO] 10-03-2025 01:45:47 [LogUtils] - Scroll to position X = 0 ; Y = 300
+  Then the user navigates to historical data section       # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.user_navigates_to_historical_data()
+
+    Embedding Screenshot step [image/png 281226 bytes]
+
+[INFO] 10-03-2025 01:45:48 [LogUtils] - Clicked on the element By.xpath: (//button[contains(@class, 'menuBtn')]/span)[2]
+[INFO] 10-03-2025 01:45:48 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@21be0ce3
+
+    Embedding clickelement_10032025_014548 [image/png 289081 bytes]
+
+[INFO] 10-03-2025 01:45:49 [LogUtils] - Clicked on the element By.xpath: //button[@value='MAX']
+[INFO] 10-03-2025 01:45:49 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@21be0ce3
+
+    Embedding clickelement_10032025_014549 [image/png 218136 bytes]
+
+[INFO] 10-03-2025 01:46:37 [LogUtils] - Scroll to position X = 0 ; Y = 100
+[INFO] 10-03-2025 01:46:37 [LogUtils] - Fetching Historical Stock Data...
+[INFO] 10-03-2025 01:46:39 [LogUtils] - Table Headers: [Date Open High Low Close
+Adj Close
+Volume]
+  Then the user verifies "MAX" data is displayed correctly # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.user_verifies_data_is_displayed_correctly(java.lang.String)
+      org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+      from disconnected: Unable to receive message from renderer
+        (Session info: chrome=134.0.6998.36)
+      Build info: version: '4.29.0', revision: '5fc1ec94cb'
+      System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+      Driver info: org.openqa.selenium.chrome.ChromeDriver
+      Command: [f825afee8b980a6232edc59921eea774, getElementText {id=f.2B12030B860CE1763DAD390836CF0C16.d.E02154C79B630505A5DCA035BBB29BDE.e.827}]
+      Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.36, chrome: {chromedriverVersion: 134.0.6998.35 (ea6ef4c2ac15..., userDataDir: C:\Users\alagu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51951}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51951/devtoo..., se:cdpVersion: 134.0.6998.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+      Element: [[ChromeDriver: chrome on windows (f825afee8b980a6232edc59921eea774)] -> xpath: //table[contains(@class, 'table yf-1jecxey')]/tbody/tr]
+      Session ID: f825afee8b980a6232edc59921eea774
+      	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+      	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+      	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+      	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+      	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+      	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+      	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+      	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+      	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+      	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+      	at com.yahoo.base.WebUI.getListElementsText(WebUI.java:1272)
+      	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.printHistoricalData(YahooFinancePage.java:237)
+      	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.user_verifies_data_is_displayed_correctly(YahooSteps.java:97)
+      	at ✽.the user verifies "MAX" data is displayed correctly(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:63)
+      org.openqa.selenium.NoSuchSessionException: invalid session id
+      Build info: version: '4.29.0', revision: '5fc1ec94cb'
+      System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+      Driver info: org.openqa.selenium.chrome.ChromeDriver
+      Command: [f825afee8b980a6232edc59921eea774, executeScript {script=return document.readyState, args=[]}]
+      Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.36, chrome: {chromedriverVersion: 134.0.6998.35 (ea6ef4c2ac15..., userDataDir: C:\Users\alagu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51951}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51951/devtoo..., se:cdpVersion: 134.0.6998.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+      Session ID: f825afee8b980a6232edc59921eea774
+      	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+      	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+      	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+      	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+      	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+      	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+      	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+      	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+      	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:476)
+      	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+      	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+      	at org.openqa.selenium.support.ThreadGuard$WebDriverInvocationHandler.invokeUnderlying(ThreadGuard.java:99)
+      	at org.openqa.selenium.support.ThreadGuard$WebDriverInvocationHandler.invoke(ThreadGuard.java:91)
+      	at jdk.proxy2/jdk.proxy2.$Proxy38.executeScript(Unknown Source)
+      	at com.yahoo.base.WebUI.waitForPageLoaded(WebUI.java:3137)
+      	at com.yahoo.hooks.Hooks.afterStep(Hooks.java:123)
+]]></system-out>
+    <system-err><![CDATA[Mar 10, 2025 1:44:36 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 134, returning the closest version; found: 133; Please update to a Selenium version that supports CDP version 134
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data One day&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](35)" classname="com.yahoo.runners.TestRunnerYahoo" time="50.709"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data five day&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](36)" classname="com.yahoo.runners.TestRunnerYahoo" time="44.285">
+    <failure message="❌ The element is NOT visible. By.xpath: //input[@id=&apos;ybar-sbq&apos;]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: ❌ The element is NOT visible. By.xpath: //input[@id='ybar-sbq']
+	at org.testng.Assert.fail(Assert.java:111)
+	at com.yahoo.base.WebUI.verifyElementVisible(WebUI.java:1959)
+	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.isPageLoaded(YahooFinancePage.java:60)
+	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.userNavigatesToYahoo(YahooSteps.java:22)
+	at ✽.the user navigates to yahoo(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:5)
+]]></failure>
+    <system-out><![CDATA[
+@Yahoo @Tc-005
+Scenario Outline: Validate Historical Stock Data five day  # src/test/resources/features/yahoofianance.feature:83
+[INFO] 10-03-2025 02:07:39 [LogUtils] - Running Scenario Name: Validate Historical Stock Data five day
+[INFO] 10-03-2025 02:07:39 [LogUtils] - Navigating to Yahoo Finance...
+[INFO] 10-03-2025 02:08:10 [LogUtils] - Open website with URL: https://finance.yahoo.com/
+[INFO] 10-03-2025 02:08:10 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@30c8ab4c
+
+    Embedding openwebsite_10032025_020810 [image/png 140491 bytes]
+
+[INFO] 10-03-2025 02:08:11 [LogUtils] - Verify element visible By.xpath: //input[@id='ybar-sbq']
+[INFO] 10-03-2025 02:08:21 [LogUtils] - ❌ The element is NOT visible. By.xpath: //input[@id='ybar-sbq']
+  Given the user navigates to yahoo                        # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.userNavigatesToYahoo()
+      java.lang.AssertionError: ❌ The element is NOT visible. By.xpath: //input[@id='ybar-sbq']
+      	at org.testng.Assert.fail(Assert.java:111)
+      	at com.yahoo.base.WebUI.verifyElementVisible(WebUI.java:1959)
+      	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.isPageLoaded(YahooFinancePage.java:60)
+      	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.userNavigatesToYahoo(YahooSteps.java:22)
+      	at ✽.the user navigates to yahoo(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:5)
+
+    Embedding Screenshot failed step [image/png 140491 bytes]
+
+
+    Embedding Screenshot step [image/png 140491 bytes]
+
+  When the user enters "AMZN" in the search bar            # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.userEntersStockSymbol(java.lang.String)
+  Then the user navigates to historical data section       # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.user_navigates_to_historical_data()
+  Then the user verifies "5_D" data is displayed correctly # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.user_verifies_data_is_displayed_correctly(java.lang.String)
+]]></system-out>
+    <system-err><![CDATA[Mar 10, 2025 2:07:39 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 134, returning the closest version; found: 133; Please update to a Selenium version that supports CDP version 134
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data three months&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](37)" classname="com.yahoo.runners.TestRunnerYahoo" time="23.749"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data six months&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](38)" classname="com.yahoo.runners.TestRunnerYahoo" time="47.124"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data year data&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](39)" classname="com.yahoo.runners.TestRunnerYahoo" time="43.038"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data one year data&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](40)" classname="com.yahoo.runners.TestRunnerYahoo" time="49.033"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data five year data&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](41)" classname="com.yahoo.runners.TestRunnerYahoo" time="87.542"/>
+  <testcase name="runScenario[&quot;Validate Historical Stock Data max data&quot;, &quot;Yahoo Finance Stock Search and Validation&quot;](42)" classname="com.yahoo.runners.TestRunnerYahoo" time="11305.855">
+    <failure message="invalid session id: session deleted as the browser has closed the connection&#10;from disconnected: Unable to receive message from renderer&#10;  (Session info: chrome=134.0.6998.36)&#10;Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;&#10;System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [c40af3b10aeb5eab2a269ca3f71f33f3, getElementText {id=f.71A6679FC22B2539C5548F4FBB6E88BC.d.7C87CDF4B341FB36E782446B3B86C202.e.4561}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.36, chrome: {chromedriverVersion: 134.0.6998.35 (ea6ef4c2ac15..., userDataDir: C:\Users\alagu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55272}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55272/devtoo..., se:cdpVersion: 134.0.6998.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on windows (c40af3b10aeb5eab2a269ca3f71f33f3)] -&gt; xpath: //table[contains(@class, &apos;table yf-1jecxey&apos;)]/tbody/tr]&#10;Session ID: c40af3b10aeb5eab2a269ca3f71f33f3" type="org.openqa.selenium.NoSuchSessionException"><![CDATA[org.openqa.selenium.NoSuchSessionException: 
+invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=134.0.6998.36)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c40af3b10aeb5eab2a269ca3f71f33f3, getElementText {id=f.71A6679FC22B2539C5548F4FBB6E88BC.d.7C87CDF4B341FB36E782446B3B86C202.e.4561}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.36, chrome: {chromedriverVersion: 134.0.6998.35 (ea6ef4c2ac15..., userDataDir: C:\Users\alagu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55272}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55272/devtoo..., se:cdpVersion: 134.0.6998.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c40af3b10aeb5eab2a269ca3f71f33f3)] -> xpath: //table[contains(@class, 'table yf-1jecxey')]/tbody/tr]
+Session ID: c40af3b10aeb5eab2a269ca3f71f33f3
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+	at com.yahoo.base.WebUI.getListElementsText(WebUI.java:1272)
+	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.printHistoricalData(YahooFinancePage.java:237)
+	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.user_verifies_data_is_displayed_correctly(YahooSteps.java:97)
+	at ✽.the user verifies "MAX" data is displayed correctly(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:63)
+]]></failure>
+    <system-out><![CDATA[
+@Yahoo @Tc-005
+Scenario Outline: Validate Historical Stock Data max data  # src/test/resources/features/yahoofianance.feature:89
+[INFO] 10-03-2025 02:12:34 [LogUtils] - Running Scenario Name: Validate Historical Stock Data max data
+[INFO] 10-03-2025 02:12:34 [LogUtils] - Navigating to Yahoo Finance...
+[INFO] 10-03-2025 02:13:13 [LogUtils] - Open website with URL: https://finance.yahoo.com/
+[INFO] 10-03-2025 02:13:13 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@541dd65d
+
+    Embedding openwebsite_10032025_021313 [image/png 660467 bytes]
+
+[INFO] 10-03-2025 02:13:14 [LogUtils] - Verify element visible By.xpath: //input[@id='ybar-sbq']
+  Given the user navigates to yahoo                        # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.userNavigatesToYahoo()
+
+    Embedding Screenshot step [image/png 660467 bytes]
+
+[INFO] 10-03-2025 02:13:14 [LogUtils] - Searching for stock: AMZN
+[INFO] 10-03-2025 02:13:14 [LogUtils] - Set text AMZN on By.xpath: //input[@id='ybar-sbq']
+[INFO] 10-03-2025 02:13:14 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@541dd65d
+
+    Embedding settext_10032025_021314 [image/png 694954 bytes]
+
+[INFO] 10-03-2025 02:13:15 [LogUtils] - Clicked on the element By.xpath: //button[@type='submit']
+[INFO] 10-03-2025 02:13:15 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@541dd65d
+
+    Embedding clickelement_10032025_021315 [image/png 704231 bytes]
+
+  When the user enters "AMZN" in the search bar            # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.userEntersStockSymbol(java.lang.String)
+
+    Embedding Screenshot step [image/png 178259 bytes]
+
+[INFO] 10-03-2025 02:13:20 [LogUtils] - Clicked on the element By.xpath: //a[contains(@category, 'history') and text()]
+[INFO] 10-03-2025 02:13:20 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@541dd65d
+
+    Embedding clickelement_10032025_021320 [image/png 423562 bytes]
+
+[INFO] 10-03-2025 02:13:22 [LogUtils] - Scroll to position X = 0 ; Y = 300
+  Then the user navigates to historical data section       # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.user_navigates_to_historical_data()
+
+    Embedding Screenshot step [image/png 278161 bytes]
+
+[INFO] 10-03-2025 02:13:23 [LogUtils] - Clicked on the element By.xpath: (//button[contains(@class, 'menuBtn')]/span)[2]
+[INFO] 10-03-2025 02:13:23 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@541dd65d
+
+    Embedding clickelement_10032025_021323 [image/png 286060 bytes]
+
+[INFO] 10-03-2025 02:13:23 [LogUtils] - Clicked on the element By.xpath: //button[@value='MAX']
+[INFO] 10-03-2025 02:13:23 [LogUtils] - Scenario in ScenarioManager: io.cucumber.java.Scenario@541dd65d
+
+    Embedding clickelement_10032025_021323 [image/png 278428 bytes]
+
+[INFO] 10-03-2025 02:13:53 [LogUtils] - Scroll to position X = 0 ; Y = 100
+[INFO] 10-03-2025 02:13:53 [LogUtils] - Fetching Historical Stock Data...
+[INFO] 10-03-2025 02:13:53 [LogUtils] - Table Headers: [Date Open High Low Close
+Adj Close
+Volume]
+  Then the user verifies "MAX" data is displayed correctly # com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.user_verifies_data_is_displayed_correctly(java.lang.String)
+      org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+      from disconnected: Unable to receive message from renderer
+        (Session info: chrome=134.0.6998.36)
+      Build info: version: '4.29.0', revision: '5fc1ec94cb'
+      System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+      Driver info: org.openqa.selenium.chrome.ChromeDriver
+      Command: [c40af3b10aeb5eab2a269ca3f71f33f3, getElementText {id=f.71A6679FC22B2539C5548F4FBB6E88BC.d.7C87CDF4B341FB36E782446B3B86C202.e.4561}]
+      Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.36, chrome: {chromedriverVersion: 134.0.6998.35 (ea6ef4c2ac15..., userDataDir: C:\Users\alagu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55272}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55272/devtoo..., se:cdpVersion: 134.0.6998.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+      Element: [[ChromeDriver: chrome on windows (c40af3b10aeb5eab2a269ca3f71f33f3)] -> xpath: //table[contains(@class, 'table yf-1jecxey')]/tbody/tr]
+      Session ID: c40af3b10aeb5eab2a269ca3f71f33f3
+      	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+      	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+      	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+      	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+      	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+      	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+      	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+      	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+      	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+      	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+      	at com.yahoo.base.WebUI.getListElementsText(WebUI.java:1272)
+      	at com.yahoo.projects.website.yahoo.pages.YahooFinancePage.printHistoricalData(YahooFinancePage.java:237)
+      	at com.yahoo.projects.website.yahoo.stepdefinitions.YahooSteps.user_verifies_data_is_displayed_correctly(YahooSteps.java:97)
+      	at ✽.the user verifies "MAX" data is displayed correctly(file:///C:/Users/alagu/IdeaProjects/AutomationFrameworkCucumberTestNG-main/src/test/resources/features/yahoofianance.feature:63)
+      org.openqa.selenium.NoSuchSessionException: invalid session id
+      Build info: version: '4.29.0', revision: '5fc1ec94cb'
+      System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+      Driver info: org.openqa.selenium.chrome.ChromeDriver
+      Command: [c40af3b10aeb5eab2a269ca3f71f33f3, executeScript {script=return document.readyState, args=[]}]
+      Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.36, chrome: {chromedriverVersion: 134.0.6998.35 (ea6ef4c2ac15..., userDataDir: C:\Users\alagu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55272}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55272/devtoo..., se:cdpVersion: 134.0.6998.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+      Session ID: c40af3b10aeb5eab2a269ca3f71f33f3
+      	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+      	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+      	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+      	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+      	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+      	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+      	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+      	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+      	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:476)
+      	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+      	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+      	at org.openqa.selenium.support.ThreadGuard$WebDriverInvocationHandler.invokeUnderlying(ThreadGuard.java:99)
+      	at org.openqa.selenium.support.ThreadGuard$WebDriverInvocationHandler.invoke(ThreadGuard.java:91)
+      	at jdk.proxy2/jdk.proxy2.$Proxy38.executeScript(Unknown Source)
+      	at com.yahoo.base.WebUI.waitForPageLoaded(WebUI.java:3137)
+      	at com.yahoo.hooks.Hooks.afterStep(Hooks.java:123)
+]]></system-out>
+    <system-err><![CDATA[Mar 10, 2025 2:12:34 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 134, returning the closest version; found: 133; Please update to a Selenium version that supports CDP version 134
+]]></system-err>
+  </testcase>
+</testsuite>
